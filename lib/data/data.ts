@@ -1,73 +1,24 @@
-import { TCCProject, TeamMember } from './types'
+import { TCCProject, TeamMember } from '../types'
 import { advisors } from './advisors'
-
-export const teamMembers: TeamMember[] = [
-  {
-    name: "Ana Silva",
-    role: "Full Stack Developer",
-    photo: "/professional-woman-developer.png",
-    linkedin: "https://linkedin.com/in/ana-silva",
-    email: "ana.silva@email.com",
-    location: "São Paulo, SP",
-    about: "Desenvolvedora apaixonada por tecnologia com 3 anos de experiência em desenvolvimento web. Especializada em criar interfaces intuitivas e sistemas robustos que fazem a diferença na vida das pessoas.",
-    career: "Atualmente trabalha como Desenvolvedora Full Stack na TechCorp, onde lidera projetos de transformação digital para o setor educacional.",
-    expertise: "Frontend Development, UI/UX Design, React, Node.js",
-    skills: ["React", "TypeScript", "Node.js", "MySQL", "Figma", "Git"],
-    achievements: [
-      "Liderou o desenvolvimento de 5 projetos web de grande escala",
-      "Certificação em React Advanced Patterns",
-      "Palestrante em eventos de tecnologia regionais",
-    ],
-  },
-  {
-    name: "Carlos Santos",
-    role: "Backend Developer",
-    photo: "/professional-man-developer.png",
-    linkedin: "https://linkedin.com/in/carlos-santos",
-    email: "carlos.santos@email.com",
-    location: "São Paulo, SP",
-    about: "Desenvolvedor backend especializado em arquiteturas escaláveis e seguras. Tem experiência sólida em bancos de dados e APIs REST, sempre focando em performance e boas práticas.",
-    career: "Trabalha como Backend Developer na DataSolutions, desenvolvendo sistemas críticos para grandes empresas do setor financeiro.",
-    expertise: "Backend Development, Database Design, API Development",
-    skills: ["Node.js", "Express", "MySQL", "MongoDB", "Docker", "AWS"],
-    achievements: [
-      "Otimizou performance de APIs em 300%",
-      "Implementou arquitetura de microserviços",
-      "Certificação AWS Solutions Architect",
-    ],
-  },
-  {
-    name: "Maria Oliveira",
-    role: "Frontend Developer & UI/UX Designer",
-    photo: "/professional-woman-frontend-developer.jpg",
-    linkedin: "https://linkedin.com/in/maria-oliveira",
-    email: "maria.oliveira@email.com",
-    location: "São Paulo, SP",
-    about: "Designer e desenvolvedora frontend com olhar apurado para experiência do usuário. Combina conhecimentos técnicos com sensibilidade estética para criar produtos digitais excepcionais.",
-    career: "Atua como UI/UX Designer na DesignStudio, onde desenvolve interfaces para startups e empresas de tecnologia em crescimento.",
-    expertise: "UI/UX Design, Frontend Development, Design Systems",
-    skills: ["React", "CSS", "Figma", "Adobe XD", "JavaScript", "Tailwind CSS"],
-    achievements: [
-      "Criou design system usado por 10+ produtos",
-      "Vencedora do prêmio 'Melhor Interface' no Hackathon ETEC 2024",
-      "Portfólio com 50+ projetos de design",
-    ],
-  },
-]
 
 export const tccProjects: TCCProject[] = [
   {
     id: 1,
-    title: "Sistema de Gestão Escolar",
-    description: "Plataforma completa para gerenciamento de notas, frequência e comunicação entre escola, alunos e responsáveis.",
-    fullDescription: `O Sistema de Gestão Escolar é uma plataforma web completa desenvolvida para modernizar e otimizar os processos administrativos e pedagógicos de instituições de ensino. 
+    title: "BusHere!",
+    description: "Plataforma de gestão integrada de logística sobre rotas, pontos, passageiros e veículos.",
+    fullDescription: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-O projeto surgiu da necessidade observada em escolas da região que ainda utilizavam métodos manuais ou sistemas desatualizados para gerenciar informações acadêmicas.
-
-A plataforma oferece diferentes níveis de acesso para professores, alunos, responsáveis e administradores, garantindo que cada usuário tenha acesso apenas às informações relevantes ao seu perfil. O sistema permite o lançamento de notas, controle de frequência, comunicação direta entre escola e família, além de relatórios detalhados sobre o desempenho acadêmico.
-
-Uma das principais inovações do projeto é o módulo de comunicação integrada, que permite o envio de notificações automáticas para responsáveis sobre faltas, notas baixas ou eventos escolares importantes.`,
-    image: "/school-management-dashboard.png",
+    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem 
+    quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi 
+    tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem 
+    ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in 
+    ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"`,
+    image: "/bushere.png",
     gallery: [
       "/school-management-dashboard.png",
       "/student-dashboard-interface.png",

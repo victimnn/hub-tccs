@@ -1,13 +1,13 @@
-import { Navigation } from "@/components/navigation"
+import { Navigation } from "@/components/layout/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ProjectCard } from "@/components/project-card"
+import { ProjectCard } from "@/components/project/project-card"
 import Link from "next/link"
 import { ArrowRight, Code, Users, Trophy, BookOpen, GraduationCap } from "lucide-react"
-import { tccProjects } from "@/lib/data"
+import { tccProjects } from "@/lib/data/data"
 import type { Metadata } from "next"
-import { Footer } from "@/components/footer"
+import { Footer } from "@/components/layout/footer"
 
 export const metadata: Metadata = {
   title: "Início",

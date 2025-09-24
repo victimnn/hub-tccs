@@ -4,7 +4,7 @@ import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/theme/theme-provider"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   authors: [{ name: "ETEC João Belarmino" }],
   creator: "ETEC João Belarmino",
   publisher: "Centro Paula Souza",
+  icons: {
+    icon: '/ds-logo.png',
+    shortcut: '/ds-logo.png',
+    apple: '/ds-logo.png',
+  },
   formatDetection: {
     email: false,
     address: false,

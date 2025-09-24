@@ -3,8 +3,8 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Users, GraduationCap, ExternalLink } from "lucide-react"
-import { TeamMemberPopup } from "./team-member-popup"
-import { AdvisorPopup } from "./advisor-popup"
+import { TeamMemberPopup } from "@/components/team/team-member-popup"
+import { AdvisorPopup } from "@/components/team/advisor-popup"
 import type { TCCProject } from "@/lib/types"
 
 interface ProjectTeamProps {

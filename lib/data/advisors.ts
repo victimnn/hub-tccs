@@ -1,4 +1,4 @@
-import type { Advisor } from './types'
+import type { Advisor } from '../types'
 
 export const advisors: Advisor[] = [
   {
