@@ -26,7 +26,7 @@ export default function HomePage() {
         <div
           className="absolute inset-0 opacity-5 dark:opacity-10"
           style={{
-            backgroundImage: `url('/modern-technical-school-building-facade-etec-archi.jpg')`,
+            backgroundImage: `url('/etec-predio.jpg')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
