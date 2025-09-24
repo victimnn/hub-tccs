@@ -86,9 +86,9 @@ export function Navigation() {
               <SheetContent side="right" className="w-80">
                 <SheetHeader>
                   <SheetTitle className="flex items-center gap-2 text-left">
-                    <GraduationCap className="h-6 w-6 text-primary" />
+                  <img src="/ds-logo.png" alt="Logo Desenvolvimento de Sistemas" className="h-15 w-auto object-contain logo-white" />
                     <div className="flex flex-col">
-                      <span className="font-bold">Hub de TCCs</span>
+                      <span className="font-bold">TCC's DS</span>
                       <span className="text-xs text-muted-foreground font-normal">ETEC João Belarmino</span>
                     </div>
                   </SheetTitle>

@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/navigation"
+import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -56,7 +57,7 @@ export default function SobrePage() {
             <span className="block text-primary/80 mt-2">Desenvolvimento de Sistemas</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto text-pretty">
-            Conheça mais sobre o curso Técnico em Desenvolvimento de Sistemas da ETEC João Belarmino e 
+            Conheça mais sobre o curso Técnico em Desenvolvimento de Sistemas integrado ao ensino médio da ETEC João Belarmino e 
             os projetos inovadores desenvolvidos pelos nossos estudantes.
           </p>
 
@@ -67,63 +68,19 @@ export default function SobrePage() {
               </Link>
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 glass hover-lift">
-              <Link href="#contato">Entre em Contato</Link>
+              <Link href="https://dsetec.vercel.app">Site Oficial do Curso</Link>
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 px-4 gradient-bg">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Nossos Números</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Dados que refletem a excelência e o compromisso do curso com a formação de profissionais qualificados
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center glass hover-lift shadow-glow">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Code className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-4xl font-bold mb-2 text-primary">8</h3>
-                <p className="text-muted-foreground">Projetos TCC Desenvolvidos</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center glass hover-lift shadow-glow">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Users className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-4xl font-bold mb-2 text-primary">35+</h3>
-                <p className="text-muted-foreground">Estudantes Envolvidos</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center glass hover-lift shadow-glow">
-              <CardContent className="p-8">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                  <TrendingUp className="h-8 w-8 text-primary" />
-                </div>
-                <h3 className="text-4xl font-bold mb-2 text-primary">95%</h3>
-                <p className="text-muted-foreground">Taxa de Aprovação</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* About Course */}
-      <section className="py-20 px-4">
+      <section className="py-10 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Sobre o Curso</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              O curso Técnico em Desenvolvimento de Sistemas prepara profissionais para o mercado de tecnologia
+              O curso Técnico em Desenvolvimento de Sistemas integrado ao ensino médio prepara profissionais para o mercado de tecnologia com conhecimentos em programação, banco de dados, desenvolvimento web, mobile e outras tecnologias.
             </p>
           </div>
 
@@ -138,7 +95,7 @@ export default function SobrePage() {
                 </div>
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   A ETEC João Belarmino é uma instituição de ensino técnico reconhecida pela excelência na formação de
-                  profissionais qualificados para o mercado de trabalho. Localizada em São Paulo, oferece educação de qualidade
+                  profissionais qualificados para o mercado de trabalho. Localizada em Amparo, oferece educação de qualidade
                   com foco na prática e inovação tecnológica.
                 </p>
                 <div className="space-y-3">
@@ -148,7 +105,7 @@ export default function SobrePage() {
                   </div>
                   <div className="flex items-center gap-3 text-sm">
                     <Calendar className="h-4 w-4 text-primary" />
-                    <span>Curso com duração de 3 semestres</span>
+                    <span>Curso com duração de 3 anos</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm">
                     <UserCheck className="h-4 w-4 text-primary" />
@@ -196,7 +153,7 @@ export default function SobrePage() {
       </section>
 
       {/* Contact Section */}
-      <section id="contato" className="py-20 px-4 gradient-bg">
+      <section id="contato" className="py-5 px-4 gradient-bg">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Entre em Contato</h2>
@@ -218,17 +175,8 @@ export default function SobrePage() {
                         </div>
                         <div>
                           <p className="font-semibold">Endereço</p>
-                          <p className="text-muted-foreground text-sm">ETEC João Belarmino, Amparo - SP</p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                          <Mail className="h-5 w-5 text-primary" />
-                        </div>
-                        <div>
-                          <p className="font-semibold">Email</p>
-                          <p className="text-muted-foreground text-sm">contato@etecjoaobelarmino.sp.gov.br</p>
+                          <p className="text-muted-foreground text-sm">Rua Sete de Setembro, 299 - Centro</p>
+                          <p className="text-muted-foreground text-sm">Amparo (SP) | CEP: 13900-372</p>
                         </div>
                       </div>
                       
@@ -237,30 +185,42 @@ export default function SobrePage() {
                           <Phone className="h-5 w-5 text-primary" />
                         </div>
                         <div>
-                          <p className="font-semibold">Telefone</p>
-                          <p className="text-muted-foreground text-sm">(19) 3817-XXXX</p>
+                          <p className="font-semibold">Telefones</p>
+                          <p className="text-muted-foreground text-sm">(19) 3807-2288 | 3807-8982 | 3808-1016</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
+                          <Mail className="h-5 w-5 text-primary" />
+                        </div>
+                        <div>
+                          <p className="font-semibold">Emails</p>
+                          <p className="text-muted-foreground text-sm">Dir. Acadêmica: e067acad@cps.sp.gov.br</p>
+                          <p className="text-muted-foreground text-sm">Dir. Serviços: e067adm@cps.sp.gov.br</p>
+                          <p className="text-muted-foreground text-sm">APM: apmjb@yahoo.com.br</p>
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="flex flex-col justify-center">
-                    <div className="text-center space-y-4">
+                    <div className="text-center space-y-6">
                       <p className="text-muted-foreground">
                         Visite nosso site oficial ou entre em contato para mais informações sobre o curso e os projetos.
                       </p>
                       
-                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button asChild className="shadow-glow hover-lift">
-                          <a href="mailto:contato@etecjoaobelarmino.sp.gov.br">
+                      <div className="flex flex-col gap-4 justify-center items-center">
+                        <Button asChild size="lg" className="shadow-glow hover-lift w-full max-w-sm">
+                          <a href="mailto:e067acad@cps.sp.gov.br">
                             <Mail className="mr-2 h-4 w-4" />
-                            Enviar Email
+                            Enviar Email para a Direção Acadêmica
                           </a>
                         </Button>
-                        <Button variant="outline" asChild className="glass hover-lift">
-                          <a href="https://etecjoaobelarmino.sp.gov.br" target="_blank" rel="noopener noreferrer">
+                        <Button variant="outline" asChild size="lg" className="glass hover-lift w-full max-w-sm">
+                          <a href="https://www.etecjoaobelarmino.com.br/" target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="mr-2 h-4 w-4" />
-                            Site Oficial
+                            Site Oficial da ETEC João Belarmino
                           </a>
                         </Button>
                       </div>
@@ -273,19 +233,7 @@ export default function SobrePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="gradient-bg border-t border-border/50 py-16 px-4">
-        <div className="container mx-auto text-center">
-          <div className="flex justify-center items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-              <img src="/ds-logo.png" alt="Logo Desenvolvimento de Sistemas" className="h-6 w-auto object-contain logo-white" />
-            </div>
-            <span className="text-3xl font-bold text-primary">TCC's Desenvolvimento de Sistemas</span>
-          </div>
-          <p className="text-lg text-muted-foreground mb-2">ETEC João Belarmino - Desenvolvimento de Sistemas</p>
-          <p className="text-sm text-muted-foreground">© 2025 DS-EtecJB. Todos os direitos reservados.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

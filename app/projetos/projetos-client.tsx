@@ -50,7 +50,7 @@ export function ProjetosClient() {
   }, [])
 
   return (
-    <div className="pt-24 pb-16 px-4">
+    <div className="mt-10 pt-24 pb-16 px-4">
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
