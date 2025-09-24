@@ -7,10 +7,9 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Hub de TCCs - ETEC João Belarmino",
+  title: "TCCs - ETEC João Belarmino",
   description:
-    "Portal virtual dos Trabalhos de Conclusão de Curso da ETEC João Belarmino - Desenvolvimento de Sistemas",
-  generator: "v0.app",
+    "Portal virtual dos Trabalhos de Conclusão de Curso da ETEC João Belarmino - Desenvolvimento de Sistemas"
 }
 
 export default function RootLayout({
