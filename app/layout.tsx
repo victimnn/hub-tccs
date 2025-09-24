@@ -9,8 +9,8 @@ import "./globals.css"
 
 export const metadata: Metadata = {
   title: {
-    default: "Hub de TCCs - ETEC João Belarmino",
-    template: "%s | Hub de TCCs - ETEC João Belarmino"
+    default: "Hub de TCC's",
+    template: "%s | Hub de TCC's"
   },
   description: "Portal virtual dos Trabalhos de Conclusão de Curso da ETEC João Belarmino. Explore projetos inovadores desenvolvidos pelos estudantes do curso Técnico em Desenvolvimento de Sistemas.",
   keywords: ["TCC", "ETEC", "João Belarmino", "Desenvolvimento de Sistemas", "Projetos", "Tecnologia", "Educação"],

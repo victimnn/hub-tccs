@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Hub de TCCs',
-    short_name: 'Hub TCCs',
+    name: 'Hub de TC\'s',
+    short_name: 'Hub TC\'s',
     description: 'Portal virtual dos Trabalhos de Conclusão de Curso da ETEC João Belarmino',
     start_url: '/',
     display: 'standalone',
