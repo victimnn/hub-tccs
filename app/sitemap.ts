@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { tccProjects } from '@/lib/data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://hub-tccs.vercel.app'
+  const baseUrl = 'https://hubtcc.vercel.app'
   
   // Páginas estáticas
   const staticPages = [

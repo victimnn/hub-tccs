@@ -33,15 +33,15 @@ export default function HomePage() {
         />
 
         <div className="relative container mx-auto text-center">
-          <div className="flex items-center justify-center gap-8 mb-12">
-            <div className="glass p-6 rounded-xl shadow-glow hover-lift flex items-center justify-center">
-              <img src="/etec-logo.png" alt="Logo da ETEC João Belarmino" className="h-20 w-auto object-contain logo-white" />
+          <div className="flex items-center justify-center gap-3 sm:gap-8 mb-12">
+            <div className="glass p-4 sm:p-6 rounded-xl shadow-glow hover-lift flex items-center justify-center">
+              <img src="/etec-logo.png" alt="Logo da ETEC João Belarmino" className="h-16 sm:h-20 w-auto object-contain logo-white" />
             </div>
-            <div className="glass p-6 rounded-xl shadow-glow hover-lift flex items-center justify-center">
-              <img src="/cps-logo.png" alt="Logo do Centro Paula Souza" className="h-20 w-auto object-contain logo-white" />
+            <div className="glass p-4 sm:p-6 rounded-xl shadow-glow hover-lift flex items-center justify-center">
+              <img src="/cps-logo.png" alt="Logo do Centro Paula Souza" className="h-16 sm:h-20 w-auto object-contain logo-white" />
             </div>
-            <div className="glass p-6 rounded-xl shadow-glow hover-lift flex items-center justify-center">
-              <img src="/sp-logo.png" alt="Logo do Estado de São Paulo" className="h-20 w-auto object-contain logo-white" />
+            <div className="glass p-4 sm:p-6 rounded-xl shadow-glow hover-lift flex items-center justify-center">
+              <img src="/sp-logo.png" alt="Logo do Estado de São Paulo" className="h-16 sm:h-20 w-auto object-contain logo-white" />
             </div>
           </div>
 

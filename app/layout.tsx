@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://hub-tccs.vercel.app'),
+  metadataBase: new URL('https://hubtcc.vercel.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://hub-tccs.vercel.app',
+    url: 'https://hubtcc.vercel.app',
     title: 'Hub de TCCs - ETEC João Belarmino',
     description: 'Portal virtual dos Trabalhos de Conclusão de Curso da ETEC João Belarmino. Explore projetos inovadores desenvolvidos pelos estudantes.',
     siteName: 'Hub de TCCs',
