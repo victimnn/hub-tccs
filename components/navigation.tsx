@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { GraduationCap, Home, Users, BookOpen, Menu } from "lucide-react"
+import { ThemeToggle } from "@/components/theme-toggle"
 import { cn } from "@/lib/utils"
 
 const navigationItems = [
@@ -38,14 +39,14 @@ export function Navigation() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+    <nav id="main-navigation" className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <GraduationCap className="h-8 w-8 text-primary" />
+          <Link href="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
+          <img src="/ds-logo.png" alt="Logo Desenvolvimento de Sistemas" className="h-20 w-auto object-contain logo-white" />
             <div className="flex flex-col">
-              <span className="font-bold text-lg">Hub de TCCs</span>
+              <span className="font-bold text-lg">TCC's Desenvolvimento de Sistemas</span>
               <span className="text-xs text-muted-foreground">ETEC João Belarmino</span>
             </div>
           </Link>
@@ -70,6 +71,7 @@ export function Navigation() {
                 </Link>
               )
             })}
+            <ThemeToggle />
           </div>
 
           {/* Mobile Navigation */}
@@ -112,6 +114,12 @@ export function Navigation() {
                       </Link>
                     )
                   })}
+                  
+                  {/* Theme Toggle for Mobile */}
+                  <div className="flex items-center justify-between px-4 py-3">
+                    <span className="text-sm font-medium">Tema</span>
+                    <ThemeToggle />
+                  </div>
                 </div>
 
                 {/* Mobile Footer */}

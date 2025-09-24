@@ -2,8 +2,16 @@ import { Navigation } from "@/components/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { ProjectCard } from "@/components/project-card"
 import Link from "next/link"
 import { ArrowRight, Code, Users, Trophy, BookOpen, GraduationCap } from "lucide-react"
+import { tccProjects } from "@/lib/data"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Início",
+  description: "Explore os projetos inovadores desenvolvidos pelos estudantes da ETEC João Belarmino no curso Técnico em Desenvolvimento de Sistemas.",
+}
 
 export default function HomePage() {
   return (
@@ -11,10 +19,11 @@ export default function HomePage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative pt-24 pb-16 px-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-background/50" />
+      <section id="main-content" className="relative pt-24 pb-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 gradient-bg" />
+        <div className="absolute inset-0 bg-grid-pattern opacity-5" />
         <div
-          className="absolute inset-0 opacity-10"
+          className="absolute inset-0 opacity-5 dark:opacity-10"
           style={{
             backgroundImage: `url('/modern-technical-school-building-facade-etec-archi.jpg')`,
             backgroundSize: "cover",
@@ -23,18 +32,21 @@ export default function HomePage() {
         />
 
         <div className="relative container mx-auto text-center">
-          <div className="flex justify-center gap-8 mb-8">
-            <div className="bg-card p-4 rounded-lg border">
-              <img src="/etec-jo-o-belarmino-logo.jpg" alt="ETEC João Belarmino" className="h-16 w-auto" />
+          <div className="flex items-center justify-center gap-8 mb-12">
+            <div className="glass p-6 rounded-xl shadow-glow hover-lift flex items-center justify-center">
+              <img src="/etec-logo.png" alt="Logo da ETEC João Belarmino" className="h-20 w-auto object-contain logo-white" />
             </div>
-            <div className="bg-card p-4 rounded-lg border">
-              <img src="/centro-paula-souza-logo.jpg" alt="Centro Paula Souza" className="h-16 w-auto" />
+            <div className="glass p-6 rounded-xl shadow-glow hover-lift flex items-center justify-center">
+              <img src="/cps-logo.png" alt="Logo do Centro Paula Souza" className="h-20 w-auto object-contain logo-white" />
+            </div>
+            <div className="glass p-6 rounded-xl shadow-glow hover-lift flex items-center justify-center">
+              <img src="/sp-logo.png" alt="Logo do Estado de São Paulo" className="h-20 w-auto object-contain logo-white" />
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">
-            Hub de TCCs
-            <span className="block text-primary">Desenvolvimento de Sistemas</span>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
+            <span className="text-primary">Hub de TCC's</span>
+            <span className="block text-primary mt-2">Desenvolvimento de Sistemas</span>
           </h1>
 
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">
@@ -42,13 +54,13 @@ export default function HomePage() {
             tecnológicas criadas para resolver problemas reais.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="text-lg px-8">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Button asChild size="lg" className="text-lg px-8 shadow-glow hover-lift">
               <Link href="/projetos">
                 Ver Projetos <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
+            <Button variant="outline" size="lg" className="text-lg px-8 glass hover-lift">
               <Link href="/sobre">Sobre o Curso</Link>
             </Button>
           </div>
@@ -56,29 +68,35 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 bg-card/50">
+      <section className="py-20 px-4 gradient-bg">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center">
+            <Card className="text-center glass hover-lift shadow-glow">
               <CardContent className="p-8">
-                <Code className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-3xl font-bold mb-2">50+</h3>
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Code className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-4xl font-bold mb-2 text-primary">8</h3>
                 <p className="text-muted-foreground">Projetos Desenvolvidos</p>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="text-center glass hover-lift shadow-glow">
               <CardContent className="p-8">
-                <Users className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-3xl font-bold mb-2">200+</h3>
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Users className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-4xl font-bold mb-2 text-primary">35+</h3>
                 <p className="text-muted-foreground">Estudantes Envolvidos</p>
               </CardContent>
             </Card>
 
-            <Card className="text-center">
+            <Card className="text-center glass hover-lift shadow-glow">
               <CardContent className="p-8">
-                <Trophy className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h3 className="text-3xl font-bold mb-2">15+</h3>
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                  <Trophy className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-4xl font-bold mb-2 text-primary">25+</h3>
                 <p className="text-muted-foreground">Tecnologias Utilizadas</p>
               </CardContent>
             </Card>
@@ -87,63 +105,23 @@ export default function HomePage() {
       </section>
 
       {/* Featured Projects Preview */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Projetos em Destaque</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Projetos em Destaque</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Conheça alguns dos projetos mais inovadores desenvolvidos pelos nossos estudantes
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {[
-              {
-                title: "Sistema de Gestão Escolar",
-                description: "Plataforma completa para gerenciamento de notas, frequência e comunicação escolar.",
-                technologies: ["React", "Node.js", "MySQL"],
-                image: "/school-management-dashboard.png",
-              },
-              {
-                title: "E-commerce Sustentável",
-                description: "Marketplace focado em produtos ecológicos com sistema de pontuação verde.",
-                technologies: ["Next.js", "Python", "PostgreSQL"],
-                image: "/sustainable-ecommerce.png",
-              },
-              {
-                title: "App de Saúde Mental",
-                description: "Aplicativo para acompanhamento do bem-estar emocional de estudantes.",
-                technologies: ["React Native", "Firebase", "Node.js"],
-                image: "/mental-health-mobile-app.jpg",
-              },
-            ].map((project, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 cursor-pointer">
-                <CardContent className="p-0">
-                  <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
-                    <img
-                      src={project.image || "/placeholder.svg"}
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                    <p className="text-muted-foreground mb-4 text-sm">{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
-                        <Badge key={tech} variant="secondary" className="text-xs">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {tccProjects.slice(0, 3).map((project) => (
+              <ProjectCard key={project.id} project={project} variant="default" />
             ))}
           </div>
 
           <div className="text-center">
-            <Button asChild size="lg">
+            <Button asChild size="lg" className="glass hover-lift shadow-glow">
               <Link href="/projetos">
                 Ver Todos os Projetos <BookOpen className="ml-2 h-5 w-5" />
               </Link>
@@ -153,14 +131,16 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-card border-t border-border py-12 px-4">
+      <footer className="gradient-bg border-t border-border/50 py-16 px-4">
         <div className="container mx-auto text-center">
-          <div className="flex justify-center items-center gap-2 mb-4">
-            <GraduationCap className="h-6 w-6 text-primary" />
-            <span className="font-semibold">ETEC João Belarmino</span>
+          <div className="flex justify-center items-center gap-3 mb-6">
+            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+            <img src="/ds-logo.png" alt="Logo Desenvolvimento de Sistemas" className="h-20 w-auto object-contain logo-white" />
+            </div>
+            <span className="text-3xl font-bold text-primary">TCC's Desenvolvimento de Sistemas</span>
           </div>
-          <p className="text-muted-foreground mb-2">Curso Técnico em Desenvolvimento de Sistemas</p>
-          <p className="text-sm text-muted-foreground">© 2025 Centro Paula Souza. Todos os direitos reservados.</p>
+          <p className="text-lg text-muted-foreground mb-2">ETEC João Belarmino - Desenvolvimento de Sistemas</p>
+          <p className="text-sm text-muted-foreground">© 2025 DS-EtecJB. Todos os direitos reservados.</p>
         </div>
       </footer>
     </div>
