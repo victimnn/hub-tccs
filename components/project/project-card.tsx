@@ -104,8 +104,8 @@ export function ProjectCard({ project, variant = 'default' }: ProjectCardProps) 
   )
 
   const renderDetailed = () => (
-    <Card className="group hover-lift shadow-glow glass overflow-hidden">
-      <CardContent className="p-0">
+    <Card className="group hover-lift shadow-glow glass overflow-hidden h-full flex flex-col">
+      <CardContent className="p-0 flex flex-col h-full">
         <div className="aspect-video bg-muted overflow-hidden relative">
           <img
             src={project.image || "/placeholder.svg"}
@@ -116,47 +116,40 @@ export function ProjectCard({ project, variant = 'default' }: ProjectCardProps) 
             <Badge variant="secondary" className="text-xs glass">
               {project.category}
             </Badge>
-            {project.status && (
-              <Badge 
-                variant={project.status === 'Aprovado' ? 'default' : project.status === 'Concluído' ? 'secondary' : 'outline'}
-                className="text-xs glass"
-              >
-                {project.status}
-              </Badge>
-            )}
           </div>
           <div className="absolute bottom-4 right-4">
             <div className="flex items-center gap-2 text-xs text-white bg-black/50 px-2 py-1 rounded-md">
               <Calendar className="h-3 w-3" />
               <span>{project.year}</span>
-              {project.semester && <span>• {project.semester}</span>}
             </div>
           </div>
         </div>
-        <div className="p-6">
-          <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-            {project.title}
-          </h3>
-          <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{project.description}</p>
-          <div className="flex items-center gap-2 mb-4 text-sm text-muted-foreground">
-            <Users className="h-4 w-4" />
-            <span>{project.members.length} integrante{project.members.length !== 1 ? 's' : ''}</span>
-            <span>•</span>
-            <span>Orientador: {project.advisor.name.split(' ')[0]}</span>
+        <div className="p-6 flex flex-col h-full">
+          <div className="flex-1">
+            <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+              {project.title}
+            </h3>
+            <p className="text-muted-foreground text-sm mb-4 line-clamp-3">{project.description}</p>
+            <div className="flex items-center gap-2 mb-4 text-sm text-muted-foreground">
+              <Users className="h-4 w-4" />
+              <span>{project.members.length} integrante{project.members.length !== 1 ? 's' : ''}</span>
+              <span>•</span>
+              <span>{project.advisor?.name?.split(' ').slice(0, 3).join(' ') || 'Orientador não informado'}</span>
+            </div>
+            <div className="flex flex-wrap gap-2 mb-5">
+              {project.technologies.slice(0, 4).map((tech) => (
+                <Badge key={tech} variant="outline" className="text-xs glass">
+                  {tech}
+                </Badge>
+              ))}
+              {project.technologies.length > 4 && (
+                <Badge variant="outline" className="text-xs glass">
+                  +{project.technologies.length - 4}
+                </Badge>
+              )}
+            </div>
           </div>
-          <div className="flex flex-wrap gap-2 mb-5">
-            {project.technologies.slice(0, 4).map((tech) => (
-              <Badge key={tech} variant="outline" className="text-xs glass">
-                {tech}
-              </Badge>
-            ))}
-            {project.technologies.length > 4 && (
-              <Badge variant="outline" className="text-xs glass">
-                +{project.technologies.length - 4}
-              </Badge>
-            )}
-          </div>
-          <Button asChild className="w-full shadow-glow">
+          <Button asChild className="w-full shadow-glow mt-auto">
             <Link href={`/projetos/${project.id}`}>
               Ver Detalhes <ExternalLink className="ml-2 h-4 w-4" />
             </Link>

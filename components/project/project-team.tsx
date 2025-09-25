@@ -3,8 +3,8 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { Users, GraduationCap, ExternalLink } from "lucide-react"
-import { TeamMemberPopup } from "./team-member-popup"
-import { AdvisorPopup } from "./advisor-popup"
+import { TeamMemberPopup } from "@/components/team/team-member-popup"
+import { AdvisorPopup } from "@/components/team/advisor-popup"
 import type { TCCProject } from "@/lib/types"
 
 interface ProjectTeamProps {
@@ -26,11 +26,11 @@ export function ProjectTeam({ project, variant = 'sidebar' }: ProjectTeamProps) 
             <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-muted/50 transition-colors cursor-pointer">
               <img
                 src={project.advisor.photo || "/placeholder.svg"}
-                alt={project.advisor.name}
+                alt={project.advisor?.name || "Orientador"}
                 className="w-10 h-10 rounded-full object-cover"
               />
               <div className="flex-1">
-                <p className="font-medium text-sm">{project.advisor.name}</p>
+                <p className="font-medium text-sm">{project.advisor?.name || "Orientador não informado"}</p>
                 <p className="text-xs text-muted-foreground">{project.advisor.title}</p>
               </div>
               <Button size="sm" variant="ghost">
@@ -87,11 +87,11 @@ export function ProjectTeam({ project, variant = 'sidebar' }: ProjectTeamProps) 
               <div className="flex items-center gap-6 p-4 rounded-lg hover:bg-muted/50 transition-colors cursor-pointer">
                 <img
                   src={project.advisor.photo || "/placeholder.svg"}
-                  alt={project.advisor.name}
+                  alt={project.advisor?.name || "Orientador"}
                   className="w-16 h-16 rounded-full object-cover"
                 />
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold">{project.advisor.name}</h3>
+                  <h3 className="text-lg font-semibold">{project.advisor?.name || "Orientador não informado"}</h3>
                   <p className="text-muted-foreground mb-2">{project.advisor.title}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.advisor.expertise.split(", ").slice(0, 3).map((skill, index) => (
@@ -164,10 +164,10 @@ export function ProjectTeam({ project, variant = 'sidebar' }: ProjectTeamProps) 
             <div className="flex items-center gap-2 p-2 rounded-lg hover:bg-muted/50 transition-colors cursor-pointer">
               <img
                 src={project.advisor.photo || "/placeholder.svg"}
-                alt={project.advisor.name}
+                alt={project.advisor?.name || "Orientador"}
                 className="w-8 h-8 rounded-full object-cover"
               />
-              <span className="text-sm font-medium">{project.advisor.name.split(' ')[0]}</span>
+              <span className="text-sm font-medium">{project.advisor?.name || "Orientador não informado"}</span>
             </div>
           </AdvisorPopup>
         </div>
@@ -176,17 +176,20 @@ export function ProjectTeam({ project, variant = 'sidebar' }: ProjectTeamProps) 
 
         {/* Membros da Equipe */}
         <div>
-          <p className="text-sm text-muted-foreground mb-2">Estudantes:</p>
-          <div className="flex flex-wrap gap-2">
+          <p className="text-sm text-muted-foreground mb-3">Estudantes:</p>
+          <div className="space-y-3">
             {project.members.map((member, index) => (
               <TeamMemberPopup key={index} member={member}>
-                <div className="flex items-center gap-2 p-1 rounded hover:bg-muted/50 transition-colors cursor-pointer">
+                <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-muted/50 transition-colors cursor-pointer">
                   <img
                     src={member.photo || "/placeholder.svg"}
                     alt={member.name}
-                    className="w-6 h-6 rounded-full object-cover"
+                    className="w-10 h-10 rounded-full object-cover"
                   />
-                  <span className="text-xs">{member.name.split(' ')[0]}</span>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium truncate">{member.name}</p>
+                    <p className="text-xs text-muted-foreground truncate">{member.role}</p>
+                  </div>
                 </div>
               </TeamMemberPopup>
             ))}

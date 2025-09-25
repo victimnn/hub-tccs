@@ -5,15 +5,17 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Search, Filter, Calendar } from "lucide-react"
-import { tccProjects } from "@/lib/data"
-import { ProjectCard } from "@/components/project-card"
+import { Search, Filter, Calendar, Grid, LayoutGrid } from "lucide-react"
+import { tccProjects } from "@/lib/data/data"
+import { ProjectCard } from "@/components/project/project-card"
+import { Carousel } from "@/components/ui/carousel"
 import type { TCCProject } from "@/lib/types"
 
 export function ProjetosClient() {
   const [searchTerm, setSearchTerm] = useState("")
   const [categoryFilter, setCategoryFilter] = useState("all")
   const [yearFilter, setYearFilter] = useState("all")
+  const [viewMode, setViewMode] = useState<"carousel" | "grid">("carousel")
 
   const filteredProjects = useMemo(() => {
     let filtered = tccProjects
@@ -105,6 +107,28 @@ export function ProjetosClient() {
                   ))}
                 </SelectContent>
               </Select>
+
+              {/* View Mode Toggle */}
+              <div className="flex border rounded-md">
+                <Button
+                  variant={viewMode === "carousel" ? "default" : "ghost"}
+                  size="sm"
+                  onClick={() => setViewMode("carousel")}
+                  className="rounded-r-none"
+                  aria-label="Visualização em carrossel"
+                >
+                  <LayoutGrid className="h-4 w-4" />
+                </Button>
+                <Button
+                  variant={viewMode === "grid" ? "default" : "ghost"}
+                  size="sm"
+                  onClick={() => setViewMode("grid")}
+                  className="rounded-l-none"
+                  aria-label="Visualização em grade"
+                >
+                  <Grid className="h-4 w-4" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
@@ -119,13 +143,29 @@ export function ProjetosClient() {
           </p>
         </div>
 
-        {/* Projects Grid */}
+        {/* Projects Display */}
         {filteredProjects.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} variant="detailed" />
-            ))}
-          </div>
+          viewMode === "carousel" ? (
+            <Carousel
+              itemsPerView={{ mobile: 1, tablet: 2, desktop: 4 }}
+              showArrows={true}
+              showDots={true}
+              autoplay={false}
+              autoplayInterval={6000}
+              gap={24}
+              className="mb-8"
+            >
+              {filteredProjects.map((project) => (
+                <ProjectCard key={project.id} project={project} variant="detailed" />
+              ))}
+            </Carousel>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredProjects.map((project) => (
+                <ProjectCard key={project.id} project={project} variant="detailed" />
+              ))}
+            </div>
+          )
         ) : (
           <div className="text-center py-12">
             <div className="text-muted-foreground mb-4">

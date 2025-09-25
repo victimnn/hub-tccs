@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { tccProjects } from '@/lib/data'
+import { tccProjects } from '@/lib/data/data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://hubtcc.vercel.app'
