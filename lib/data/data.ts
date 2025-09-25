@@ -82,8 +82,6 @@ export const tccProjects: TCCProject[] = [
     advisor: advisors[0],
     year: "2024",
     category: "Web",
-    semester: "2º Semestre",
-    status: "Aprovado",
     features: [
       "Gestão de notas e frequência",
       "Portal do aluno e responsável",
@@ -143,8 +141,6 @@ export const tccProjects: TCCProject[] = [
     advisor: advisors[1],
     year: "2024",
     category: "Web",
-    semester: "2º Semestre",
-    status: "Em Desenvolvimento",
     features: [
       "Sistema de pontuação verde",
       "Rastreamento de impacto ambiental",
@@ -201,8 +197,6 @@ export const tccProjects: TCCProject[] = [
     advisor: advisors[2],
     year: "2024",
     category: "Mobile",
-    semester: "1º Semestre",
-    status: "Concluído",
     features: [
       "Acompanhamento de humor diário",
       "Sessões de meditação guiada",
@@ -261,8 +255,6 @@ export const tccProjects: TCCProject[] = [
     advisor: advisors[3],
     year: "2023",
     category: "Web",
-    semester: "2º Semestre",
-    status: "Aprovado",
     features: [
       "Gestão de acervo digital",
       "Sistema de empréstimos online",
@@ -321,8 +313,6 @@ export const tccProjects: TCCProject[] = [
     advisor: advisors[0],
     year: "2023",
     category: "Mobile",
-    semester: "1º Semestre",
-    status: "Concluído",
     features: [
       "Controle de gastos por categoria",
       "Categorização automática",
@@ -380,8 +370,6 @@ export const tccProjects: TCCProject[] = [
     advisor: advisors[1],
     year: "2023",
     category: "Web",
-    semester: "2º Semestre",
-    status: "Aprovado",
     features: [
       "Painel administrativo completo",
       "App mobile para clientes",
@@ -440,8 +428,6 @@ export const tccProjects: TCCProject[] = [
     advisor: advisors[2],
     year: "2024",
     category: "Mobile",
-    semester: "1º Semestre",
-    status: "Em Desenvolvimento",
     features: [
       "Sugestão inteligente de receitas",
       "Análise de ingredientes disponíveis",
@@ -499,8 +485,6 @@ export const tccProjects: TCCProject[] = [
     advisor: advisors[3],
     year: "2023",
     category: "Web",
-    semester: "2º Semestre",
-    status: "Aprovado",
     features: [
       "Agendamento online de consultas",
       "Integração com calendário",

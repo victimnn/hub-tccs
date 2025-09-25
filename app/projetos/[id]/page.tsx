@@ -56,10 +56,10 @@ export default function TCCDetailsPage({ params }: PageProps) {
     <div className="min-h-screen bg-background">
       <Navigation />
 
-      <div className="pt-24 pb-16 px-4">
-        <div className="container mx-auto max-w-6xl">
+      <div className="pt-20 pb-12 px-4">
+        <div className="container mx-auto max-w-7xl">
           {/* Back Button */}
-          <div className="mb-8">
+          <div className="mb-6">
             <Button variant="ghost" asChild>
               <Link href="/projetos">
                 <ArrowLeft className="mr-2 h-4 w-4" />
@@ -68,11 +68,12 @@ export default function TCCDetailsPage({ params }: PageProps) {
             </Button>
           </div>
 
-          {/* Header */}
-          <div className="mb-12">
-            <div className="flex flex-col lg:flex-row gap-8">
-              <div className="lg:w-2/3">
-                <div className="flex items-center gap-4 mb-4">
+          {/* Header com imagem integrada */}
+          <div className="mb-8">
+            <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 items-start">
+              {/* Conteúdo principal */}
+              <div className="xl:col-span-2">
+                <div className="flex items-center gap-4 mb-3">
                   <Badge variant="secondary">{project.category}</Badge>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Calendar className="h-4 w-4" />
@@ -80,13 +81,13 @@ export default function TCCDetailsPage({ params }: PageProps) {
                   </div>
                 </div>
 
-                <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">{project.title}</h1>
+                <h1 className="text-3xl md:text-4xl font-bold mb-3 text-balance">{project.title}</h1>
 
-                <p className="text-xl text-muted-foreground mb-6 text-pretty">{project.description}</p>
+                <p className="text-lg text-muted-foreground mb-4 text-pretty">{project.description}</p>
 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.links?.demo && (
-                    <Button asChild>
+                    <Button asChild size="sm">
                       <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
                         <Play className="mr-2 h-4 w-4" />
                         Ver Demo
@@ -95,53 +96,55 @@ export default function TCCDetailsPage({ params }: PageProps) {
                   )}
 
                   {project.links?.github && (
-                    <Button variant="outline" asChild>
+                    <Button variant="outline" asChild size="sm">
                       <a href={project.links.github} target="_blank" rel="noopener noreferrer">
                         <Github className="mr-2 h-4 w-4" />
-                        Código Fonte
+                        Código
                       </a>
                     </Button>
                   )}
 
                   {project.links?.documentation && (
-                    <Button variant="outline" asChild>
+                    <Button variant="outline" asChild size="sm">
                       <a href={project.links.documentation} target="_blank" rel="noopener noreferrer">
                         <Download className="mr-2 h-4 w-4" />
-                        Documentação
+                        Docs
                       </a>
                     </Button>
                   )}
                 </div>
+
+                {/* Imagem principal integrada */}
+                <div className="aspect-video bg-muted rounded-lg overflow-hidden">
+                  <img src={project.image || "/placeholder.svg"} alt={project.title} className="w-full h-full object-cover" />
+                </div>
               </div>
 
-              <div className="lg:w-1/3">
-                <ProjectTeam project={project} variant="sidebar" />
+              {/* Sidebar compacta */}
+              <div className="xl:col-span-1 space-y-6">
+                <ProjectTeam project={project} variant="compact" />
+                <ProjectInfo project={project} variant="sidebar" />
+                <ProjectTechnologies project={project} variant="sidebar" />
               </div>
             </div>
           </div>
 
-          {/* Main Image */}
-          <div className="mb-12">
-            <div className="aspect-video bg-muted rounded-lg overflow-hidden">
-              <img src={project.image || "/placeholder.svg"} alt={project.title} className="w-full h-full object-cover" />
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          {/* Conteúdo principal */}
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
             {/* Main Content */}
-            <div className="lg:col-span-2 space-y-12">
+            <div className="xl:col-span-2 space-y-8">
               {/* Description */}
               <section>
-                <h2 className="text-2xl font-bold mb-6">Sobre o Projeto</h2>
+                <h2 className="text-2xl font-bold mb-4">Sobre o Projeto</h2>
                 <div className="prose prose-gray dark:prose-invert max-w-none">
                   {project.fullDescription ? (
                     project.fullDescription.split("\n\n").map((paragraph, index) => (
-                      <p key={index} className="text-muted-foreground leading-relaxed mb-4">
+                      <p key={index} className="text-muted-foreground leading-relaxed mb-3">
                         {paragraph}
                       </p>
                     ))
                   ) : (
-                    <p className="text-muted-foreground leading-relaxed mb-4">
+                    <p className="text-muted-foreground leading-relaxed mb-3">
                       {project.description}
                     </p>
                   )}
@@ -151,12 +154,12 @@ export default function TCCDetailsPage({ params }: PageProps) {
               {/* Features */}
               {project.features && project.features.length > 0 && (
                 <section>
-                  <h2 className="text-2xl font-bold mb-6">Principais Funcionalidades</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <h2 className="text-2xl font-bold mb-4">Principais Funcionalidades</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {project.features.map((feature, index) => (
-                      <div key={index} className="flex items-center gap-3 p-4 bg-muted/50 rounded-lg">
-                        <div className="w-2 h-2 bg-primary rounded-full" />
-                        <span>{feature}</span>
+                      <div key={index} className="flex items-center gap-3 p-3 bg-muted/50 rounded-lg">
+                        <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
+                        <span className="text-sm">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -166,11 +169,11 @@ export default function TCCDetailsPage({ params }: PageProps) {
               {/* Gallery */}
               {project.gallery && project.gallery.length > 0 && (
                 <section>
-                  <h2 className="text-2xl font-bold mb-6 flex items-center">
+                  <h2 className="text-2xl font-bold mb-4 flex items-center">
                     <ImageIcon className="mr-2 h-5 w-5" />
                     Galeria de Imagens
                   </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {project.gallery.map((image, index) => (
                       <div key={index} className="aspect-video bg-muted rounded-lg overflow-hidden">
                         <img
@@ -185,21 +188,17 @@ export default function TCCDetailsPage({ params }: PageProps) {
               )}
             </div>
 
-            {/* Sidebar */}
-            <div className="space-y-8">
-              <ProjectTechnologies project={project} variant="sidebar" />
-              <ProjectInfo project={project} variant="sidebar" />
-
-              {/* Share */}
+            {/* Sidebar adicional (compartilhar) */}
+            <div className="xl:col-span-1">
               <Card>
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-4">Compartilhar</h3>
                   <div className="flex gap-2">
-                    <Button size="sm" variant="outline" className="flex-1 bg-transparent">
+                    <Button size="sm" variant="outline" className="flex-1">
                       <Globe className="mr-2 h-4 w-4" />
                       Link
                     </Button>
-                    <Button size="sm" variant="outline" className="flex-1 bg-transparent">
+                    <Button size="sm" variant="outline" className="flex-1">
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Compartilhar
                     </Button>

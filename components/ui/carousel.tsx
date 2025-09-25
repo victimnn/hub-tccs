@@ -97,7 +97,7 @@ export function Carousel({
   }
 
   // Se não há slides suficientes para navegação, mostrar apenas os primeiros itens
-  if (totalSlides <= 1) {
+  if (totalSlides <= 1 && totalItems <= itemsPerSlide) {
     const itemsToShow = Math.min(itemsPerSlide, totalItems)
     return (
       <div className={cn("relative w-full", className)}>
@@ -108,12 +108,15 @@ export function Carousel({
           {children.slice(0, itemsToShow).map((child, index) => (
             <div
               key={index}
-              className="flex-shrink-0"
+              className="flex-shrink-0 h-[500px]"
               style={{
                 width: `calc(${100 / itemsToShow}% - ${gap * (itemsToShow - 1) / itemsToShow}px)`,
+                minHeight: '500px',
               }}
             >
-              {child}
+              <div className="h-full w-full">
+                {child}
+              </div>
             </div>
           ))}
         </div>
@@ -133,7 +136,6 @@ export function Carousel({
           className="flex transition-transform duration-500 ease-in-out"
           style={{
             transform: `translateX(-${currentIndex * 100}%)`,
-            gap: `${gap}px`,
           }}
         >
           {Array.from({ length: totalSlides }).map((_, slideIndex) => (
@@ -141,26 +143,30 @@ export function Carousel({
               key={slideIndex}
               className="flex-shrink-0 w-full"
               style={{
-                width: `calc(${100 / totalSlides}% - ${gap * (totalSlides - 1) / totalSlides}px)`,
+                width: "100%",
               }}
             >
               <div 
                 className="flex"
                 style={{ gap: `${gap}px` }}
               >
-                {children
-                  .slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide)
-                  .map((child, index) => (
+                {(() => {
+                  const slideItems = children.slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide)
+                  return slideItems.map((child, index) => (
                     <div
                       key={index}
-                      className="flex-shrink-0"
+                      className="flex-shrink-0 h-[500px]"
                       style={{
-                        width: `calc(${100 / itemsPerSlide}% - ${gap * (itemsPerSlide - 1) / itemsPerSlide}px)`,
+                        width: `calc(${100 / slideItems.length}% - ${gap * (slideItems.length - 1) / slideItems.length}px)`,
+                        minHeight: '500px',
                       }}
                     >
-                      {child}
+                      <div className="h-full w-full">
+                        {child}
+                      </div>
                     </div>
-                  ))}
+                  ))
+                })()}
               </div>
             </div>
           ))}
@@ -169,26 +175,29 @@ export function Carousel({
 
       {/* Navigation Arrows */}
       {showArrows && totalSlides > 1 && (
-        <>
+        <div className="flex justify-between items-center mb-6 mt-8">
           <Button
             variant="outline"
-            size="icon"
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm hover:bg-background shadow-lg"
+            size="lg"
+            className="h-12 w-12 bg-background/80 backdrop-blur-sm hover:bg-background shadow-lg"
             onClick={goToPrevious}
             aria-label="Slide anterior"
           >
-            <ChevronLeft className="h-4 w-4" />
+            <ChevronLeft className="h-6 w-6" />
           </Button>
+          <div className="text-base font-medium text-muted-foreground">
+            {currentIndex + 1} de {totalSlides}
+          </div>
           <Button
             variant="outline"
-            size="icon"
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-background/80 backdrop-blur-sm hover:bg-background shadow-lg"
+            size="lg"
+            className="h-12 w-12 bg-background/80 backdrop-blur-sm hover:bg-background shadow-lg"
             onClick={goToNext}
             aria-label="Próximo slide"
           >
-            <ChevronRight className="h-4 w-4" />
+            <ChevronRight className="h-6 w-6" />
           </Button>
-        </>
+        </div>
       )}
 
       {/* Dots Indicator */}

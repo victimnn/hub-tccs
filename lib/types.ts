@@ -44,8 +44,6 @@ export interface TCCProject {
   category: 'Web' | 'Mobile' | 'Desktop'
   features?: string[]
   links?: ProjectLinks
-  semester?: string
-  status?: 'Concluído' | 'Em Desenvolvimento' | 'Aprovado'
 }
 
 export interface NavigationItem {

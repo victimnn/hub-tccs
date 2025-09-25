@@ -22,27 +22,10 @@ export function ProjectInfo({ project, variant = 'sidebar' }: ProjectInfoProps) 
             <span className="text-muted-foreground">Ano:</span>
             <span>{project.year}</span>
           </div>
-          {project.semester && (
-            <div className="flex justify-between">
-              <span className="text-muted-foreground">Semestre:</span>
-              <span>{project.semester}</span>
-            </div>
-          )}
           <div className="flex justify-between">
             <span className="text-muted-foreground">Equipe:</span>
             <span>{project.members.length} pessoa{project.members.length !== 1 ? 's' : ''}</span>
           </div>
-          {project.status && (
-            <div className="flex justify-between">
-              <span className="text-muted-foreground">Status:</span>
-              <Badge 
-                variant={project.status === 'Aprovado' ? 'default' : project.status === 'Concluído' ? 'secondary' : 'outline'}
-                className="text-xs"
-              >
-                {project.status}
-              </Badge>
-            </div>
-          )}
         </div>
       </CardContent>
     </Card>
@@ -84,34 +67,9 @@ export function ProjectInfo({ project, variant = 'sidebar' }: ProjectInfoProps) 
               </div>
             </div>
             
-            {project.status && (
-              <div className="flex items-center gap-3">
-                <CheckCircle className="h-5 w-5 text-primary" />
-                <div>
-                  <p className="text-sm text-muted-foreground">Status</p>
-                  <Badge 
-                    variant={project.status === 'Aprovado' ? 'default' : project.status === 'Concluído' ? 'secondary' : 'outline'}
-                    className="text-xs"
-                  >
-                    {project.status}
-                  </Badge>
-                </div>
-              </div>
-            )}
           </div>
         </div>
         
-        {project.semester && (
-          <div className="mt-6 pt-6 border-t">
-            <div className="flex items-center gap-3">
-              <Calendar className="h-5 w-5 text-primary" />
-              <div>
-                <p className="text-sm text-muted-foreground">Semestre</p>
-                <p className="font-semibold">{project.semester}</p>
-              </div>
-            </div>
-          </div>
-        )}
       </CardContent>
     </Card>
   )
@@ -136,18 +94,6 @@ export function ProjectInfo({ project, variant = 'sidebar' }: ProjectInfoProps) 
         <span>{project.members.length} pessoa{project.members.length !== 1 ? 's' : ''}</span>
       </div>
       
-      {project.status && (
-        <div className="flex items-center gap-2">
-          <CheckCircle className="h-4 w-4 text-muted-foreground" />
-          <span className="text-muted-foreground">Status:</span>
-          <Badge 
-            variant={project.status === 'Aprovado' ? 'default' : project.status === 'Concluído' ? 'secondary' : 'outline'}
-            className="text-xs"
-          >
-            {project.status}
-          </Badge>
-        </div>
-      )}
     </div>
   )
 
