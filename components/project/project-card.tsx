@@ -134,7 +134,7 @@ export function ProjectCard({ project, variant = 'default' }: ProjectCardProps) 
               <Users className="h-4 w-4" />
               <span>{project.members.length} integrante{project.members.length !== 1 ? 's' : ''}</span>
               <span>•</span>
-              <span>{project.advisor.name.split(' ').slice(0, 3).join(' ')}</span>
+              <span>{project.advisor?.name?.split(' ').slice(0, 3).join(' ') || 'Orientador não informado'}</span>
             </div>
             <div className="flex flex-wrap gap-2 mb-5">
               {project.technologies.slice(0, 4).map((tech) => (

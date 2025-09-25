@@ -115,9 +115,27 @@ export default function TCCDetailsPage({ params }: PageProps) {
                 </div>
 
                 {/* Imagem principal integrada */}
-                <div className="aspect-video bg-muted rounded-lg overflow-hidden">
+                <div className="aspect-video bg-muted rounded-lg overflow-hidden mb-6">
                   <img src={project.image || "/placeholder.svg"} alt={project.title} className="w-full h-full object-cover" />
                 </div>
+
+                {/* Sobre o Projeto - Logo abaixo da imagem */}
+                <section className="mb-8">
+                  <h2 className="text-2xl font-bold mb-4">Sobre o Projeto</h2>
+                  <div className="prose prose-gray dark:prose-invert max-w-none">
+                    {project.fullDescription ? (
+                      project.fullDescription.split("\n\n").map((paragraph, index) => (
+                        <p key={index} className="text-muted-foreground leading-relaxed mb-3">
+                          {paragraph}
+                        </p>
+                      ))
+                    ) : (
+                      <p className="text-muted-foreground leading-relaxed mb-3">
+                        {project.description}
+                      </p>
+                    )}
+                  </div>
+                </section>
               </div>
 
               {/* Sidebar compacta */}
@@ -133,23 +151,6 @@ export default function TCCDetailsPage({ params }: PageProps) {
           <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
             {/* Main Content */}
             <div className="xl:col-span-2 space-y-8">
-              {/* Description */}
-              <section>
-                <h2 className="text-2xl font-bold mb-4">Sobre o Projeto</h2>
-                <div className="prose prose-gray dark:prose-invert max-w-none">
-                  {project.fullDescription ? (
-                    project.fullDescription.split("\n\n").map((paragraph, index) => (
-                      <p key={index} className="text-muted-foreground leading-relaxed mb-3">
-                        {paragraph}
-                      </p>
-                    ))
-                  ) : (
-                    <p className="text-muted-foreground leading-relaxed mb-3">
-                      {project.description}
-                    </p>
-                  )}
-                </div>
-              </section>
 
               {/* Features */}
               {project.features && project.features.length > 0 && (

@@ -18,12 +18,10 @@ export const tccProjects: TCCProject[] = [
     tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem 
     ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in 
     ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"`,
-    image: "/bushere.png",
+    image: "/etec-predio.jpg",
     gallery: [
-      "/school-management-dashboard.png",
-      "/student-dashboard-interface.png",
-      "/teacher-grade-management.jpg",
-      "/parent-communication-portal.jpg",
+      "/etec-predio.jpg",
+      "/etec-predio.jpg",
     ],
     technologies: ["React", "Node.js", "MySQL", "Express"],
     members: [

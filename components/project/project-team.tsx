@@ -26,11 +26,11 @@ export function ProjectTeam({ project, variant = 'sidebar' }: ProjectTeamProps) 
             <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-muted/50 transition-colors cursor-pointer">
               <img
                 src={project.advisor.photo || "/placeholder.svg"}
-                alt={project.advisor.name}
+                alt={project.advisor?.name || "Orientador"}
                 className="w-10 h-10 rounded-full object-cover"
               />
               <div className="flex-1">
-                <p className="font-medium text-sm">{project.advisor.name}</p>
+                <p className="font-medium text-sm">{project.advisor?.name || "Orientador não informado"}</p>
                 <p className="text-xs text-muted-foreground">{project.advisor.title}</p>
               </div>
               <Button size="sm" variant="ghost">
@@ -87,11 +87,11 @@ export function ProjectTeam({ project, variant = 'sidebar' }: ProjectTeamProps) 
               <div className="flex items-center gap-6 p-4 rounded-lg hover:bg-muted/50 transition-colors cursor-pointer">
                 <img
                   src={project.advisor.photo || "/placeholder.svg"}
-                  alt={project.advisor.name}
+                  alt={project.advisor?.name || "Orientador"}
                   className="w-16 h-16 rounded-full object-cover"
                 />
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold">{project.advisor.name}</h3>
+                  <h3 className="text-lg font-semibold">{project.advisor?.name || "Orientador não informado"}</h3>
                   <p className="text-muted-foreground mb-2">{project.advisor.title}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.advisor.expertise.split(", ").slice(0, 3).map((skill, index) => (
@@ -164,10 +164,10 @@ export function ProjectTeam({ project, variant = 'sidebar' }: ProjectTeamProps) 
             <div className="flex items-center gap-2 p-2 rounded-lg hover:bg-muted/50 transition-colors cursor-pointer">
               <img
                 src={project.advisor.photo || "/placeholder.svg"}
-                alt={project.advisor.name}
+                alt={project.advisor?.name || "Orientador"}
                 className="w-8 h-8 rounded-full object-cover"
               />
-              <span className="text-sm font-medium">{project.advisor.name}</span>
+              <span className="text-sm font-medium">{project.advisor?.name || "Orientador não informado"}</span>
             </div>
           </AdvisorPopup>
         </div>
