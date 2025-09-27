@@ -20,7 +20,7 @@ export default function HomePage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section id="main-content" className="relative pt-24 pb-20 px-4 overflow-hidden">
+      <section className="relative pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 md:pb-20 px-4 mt-16 sm:mt-10 md:mt-15 overflow-hidden">
         <div className="absolute inset-0 gradient-bg" />
         <div className="absolute inset-0 bg-grid-pattern opacity-5" />
         <div
@@ -33,7 +33,7 @@ export default function HomePage() {
         />
 
         <div className="relative container mx-auto text-center">
-          <div className="flex items-center justify-center gap-3 sm:gap-8 mb-12">
+          <div className="flex items-center justify-center gap-3 sm:gap-8 mb-8 sm:mb-10 md:mb-12">
             <div className="glass p-4 sm:p-6 rounded-xl shadow-glow hover-lift flex items-center justify-center">
               <img src="/etec-logo.png" alt="Logo da ETEC João Belarmino" className="h-16 sm:h-20 w-auto object-contain logo-white" />
             </div>
@@ -45,12 +45,12 @@ export default function HomePage() {
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-5 md:mb-6 text-balance">
             <span className="text-primary">Hub de TCC's</span>
             <span className="block text-primary mt-2">Desenvolvimento de Sistemas</span>
           </h1>
 
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-pretty">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-7 md:mb-8 max-w-2xl mx-auto text-pretty">
             Explore os projetos inovadores desenvolvidos pelos estudantes da ETEC João Belarmino. Conheça as soluções
             tecnológicas criadas para resolver problemas reais.
           </p>
@@ -69,7 +69,7 @@ export default function HomePage() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-4 gradient-bg">
+      <section className="py-12 sm:py-16 md:py-20 px-4 gradient-bg">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="text-center glass hover-lift shadow-glow">
@@ -106,11 +106,11 @@ export default function HomePage() {
       </section>
 
       {/* Featured Projects Preview */}
-      <section className="py-20 px-4">
+      <section className="py-12 sm:py-16 md:py-20 px-4">
         <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Projetos em Destaque</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="text-center mb-12 sm:mb-14 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-5 md:mb-6 text-primary">Projetos em Destaque</h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Conheça alguns dos projetos mais inovadores desenvolvidos pelos nossos estudantes
             </p>
           </div>

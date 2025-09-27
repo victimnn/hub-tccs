@@ -35,28 +35,28 @@ export default function SobrePage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative pt-24 pb-20 px-4 overflow-hidden">
+      <section className="relative pt-16 sm:pt-20 md:pt-24 pb-12 sm:pb-16 md:pb-20 px-4 mt-16 sm:mt-10 md:mt-15 overflow-hidden">
         <div className="absolute inset-0 gradient-bg" />
         <div className="absolute inset-0 bg-grid-pattern opacity-5" />
         
         <div className="relative container mx-auto text-center">
-          <div className="flex items-center justify-center gap-3 sm:gap-8 mb-12">
-            <div className="glass p-4 sm:p-6 rounded-xl shadow-glow hover-lift flex items-center justify-center">
-              <img src="/etec-logo.png" alt="Logo da ETEC João Belarmino" className="h-16 sm:h-20 w-auto object-contain logo-white" />
+          <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 mb-8 sm:mb-10 md:mb-12 relative z-10">
+            <div className="glass p-3 sm:p-4 md:p-5 lg:p-6 rounded-xl shadow-glow hover-lift flex items-center justify-center min-w-0">
+              <img src="/etec-logo.png" alt="Logo da ETEC João Belarmino" className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain logo-white max-w-full" />
             </div>
-            <div className="glass p-4 sm:p-6 rounded-xl shadow-glow hover-lift flex items-center justify-center">
-              <img src="/cps-logo.png" alt="Logo do Centro Paula Souza" className="h-16 sm:h-20 w-auto object-contain logo-white" />
+            <div className="glass p-3 sm:p-4 md:p-5 lg:p-6 rounded-xl shadow-glow hover-lift flex items-center justify-center min-w-0">
+              <img src="/cps-logo.png" alt="Logo do Centro Paula Souza" className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain logo-white max-w-full" />
             </div>
-            <div className="glass p-4 sm:p-6 rounded-xl shadow-glow hover-lift flex items-center justify-center">
-              <img src="/sp-logo.png" alt="Logo do Estado de São Paulo" className="h-16 sm:h-20 w-auto object-contain logo-white" />
+            <div className="glass p-3 sm:p-4 md:p-5 lg:p-6 rounded-xl shadow-glow hover-lift flex items-center justify-center min-w-0">
+              <img src="/sp-logo.png" alt="Logo do Estado de São Paulo" className="h-12 sm:h-14 md:h-16 lg:h-20 w-auto object-contain logo-white max-w-full" />
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-5 md:mb-6 text-balance">
             <span className="text-primary">Sobre o Curso</span>
             <span className="block text-primary/80 mt-2">Desenvolvimento de Sistemas</span>
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto text-pretty">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-7 md:mb-8 max-w-3xl mx-auto text-pretty">
             Conheça mais sobre o curso Técnico em Desenvolvimento de Sistemas integrado ao ensino médio da ETEC João Belarmino e 
             os projetos inovadores desenvolvidos pelos nossos estudantes.
           </p>
@@ -78,8 +78,8 @@ export default function SobrePage() {
       <section className="py-10 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Sobre o Curso</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-5 md:mb-6 text-primary">Sobre o Curso</h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               O curso Técnico em Desenvolvimento de Sistemas integrado ao ensino médio prepara profissionais para o mercado de tecnologia com conhecimentos em programação, banco de dados, desenvolvimento web, mobile e outras tecnologias.
             </p>
           </div>
@@ -156,18 +156,18 @@ export default function SobrePage() {
       <section id="contato" className="py-5 px-4 gradient-bg">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">Entre em Contato</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-5 md:mb-6 text-primary">Entre em Contato</h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Tem alguma dúvida sobre os projetos ou quer saber mais sobre o curso? Entre em contato conosco!
             </p>
           </div>
 
           <div className="max-w-4xl mx-auto">
             <Card className="glass shadow-glow">
-              <CardContent className="p-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <CardContent className="p-4 sm:p-6 md:p-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                   <div>
-                    <h3 className="text-2xl font-bold mb-6 text-primary">Informações de Contato</h3>
+                    <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-5 md:mb-6 text-primary">Informações de Contato</h3>
                     <div className="space-y-4">
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
@@ -210,17 +210,19 @@ export default function SobrePage() {
                         Visite nosso site oficial ou entre em contato para mais informações sobre o curso e os projetos.
                       </p>
                       
-                      <div className="flex flex-col gap-4 justify-center items-center">
-                        <Button asChild size="lg" className="shadow-glow hover-lift w-full max-w-sm">
+                      <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center">
+                        <Button asChild size="lg" className="shadow-glow hover-lift w-full max-w-sm text-sm sm:text-base">
                           <a href="mailto:e067acad@cps.sp.gov.br">
                             <Mail className="mr-2 h-4 w-4" />
-                            Enviar Email para a Direção Acadêmica
+                            <span className="hidden sm:inline">Enviar Email para a Direção Acadêmica</span>
+                            <span className="sm:hidden">Enviar Email</span>
                           </a>
                         </Button>
-                        <Button variant="outline" asChild size="lg" className="glass hover-lift w-full max-w-sm">
+                        <Button variant="outline" asChild size="lg" className="glass hover-lift w-full max-w-sm text-sm sm:text-base">
                           <a href="https://www.etecjoaobelarmino.com.br/" target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="mr-2 h-4 w-4" />
-                            Site Oficial da ETEC João Belarmino
+                            <span className="hidden sm:inline">Site Oficial da ETEC João Belarmino</span>
+                            <span className="sm:hidden">Site Oficial</span>
                           </a>
                         </Button>
                       </div>
