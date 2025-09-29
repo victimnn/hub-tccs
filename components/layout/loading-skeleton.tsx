@@ -5,7 +5,7 @@ export function ProjectCardSkeleton() {
   return (
     <Card className="overflow-hidden">
       <CardContent className="p-0">
-        <div className="aspect-video bg-muted">
+        <div className="aspect-video bg-white">
           <Skeleton className="w-full h-full" />
         </div>
         <div className="p-6">

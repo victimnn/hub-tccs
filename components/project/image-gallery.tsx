@@ -66,7 +66,7 @@ export function ImageGallery({ images, projectTitle, className }: ImageGalleryPr
         {images.map((image, index) => (
           <div 
             key={index} 
-            className="aspect-video bg-muted rounded-lg overflow-hidden relative group cursor-pointer"
+            className="aspect-video bg-white rounded-lg overflow-hidden relative group cursor-pointer"
             onClick={() => openImage(index)}
           >
             <img

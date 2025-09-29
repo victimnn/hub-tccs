@@ -130,7 +130,7 @@ export default function TCCDetailsPage({ params }: PageProps) {
                 </div>
 
                 {/* Imagem principal integrada */}
-                <div className="aspect-video bg-muted rounded-lg overflow-hidden mb-6 flex items-center justify-center">
+                <div className="aspect-video bg-white rounded-lg overflow-hidden mb-6 flex items-center justify-center">
                   <img src={project.image || "/placeholder.svg"} alt={project.title} className="max-w-full max-h-full object-contain" />
                 </div>
 
@@ -173,7 +173,7 @@ export default function TCCDetailsPage({ params }: PageProps) {
                   <h2 className="text-2xl font-bold mb-4">Principais Funcionalidades</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {project.features.map((feature, index) => (
-                      <div key={index} className="flex items-center gap-3 p-3 bg-muted/50 rounded-lg">
+                      <div key={index} className="flex items-center gap-3 p-3 bg-white/50 rounded-lg">
                         <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
                         <span className="text-sm">{feature}</span>
                       </div>

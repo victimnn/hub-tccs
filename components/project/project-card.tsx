@@ -14,7 +14,7 @@ export function ProjectCard({ project, variant = 'default' }: ProjectCardProps) 
   const renderCompact = () => (
     <Card className="group hover-lift shadow-glow glass overflow-hidden">
       <CardContent className="p-0">
-        <div className="aspect-video bg-muted overflow-hidden relative flex items-center justify-center">
+        <div className="aspect-video bg-white overflow-hidden relative flex items-center justify-center">
           <img
             src={project.image || "/placeholder.svg"}
             alt={`Screenshot do projeto ${project.title}`}
@@ -58,7 +58,7 @@ export function ProjectCard({ project, variant = 'default' }: ProjectCardProps) 
   const renderDefault = () => (
     <Card className="group hover-lift shadow-glow glass overflow-hidden">
       <CardContent className="p-0">
-        <div className="aspect-video bg-muted overflow-hidden relative flex items-center justify-center">
+        <div className="aspect-video bg-white overflow-hidden relative flex items-center justify-center">
           <img
             src={project.image || "/placeholder.svg"}
             alt={`Screenshot do projeto ${project.title}`}
@@ -114,7 +114,7 @@ export function ProjectCard({ project, variant = 'default' }: ProjectCardProps) 
   const renderDetailed = () => (
     <Card className="group hover-lift shadow-glow glass overflow-hidden h-full flex flex-col">
       <CardContent className="p-0 flex flex-col h-full">
-        <div className="aspect-video bg-muted overflow-hidden relative flex items-center justify-center">
+        <div className="aspect-video bg-white overflow-hidden relative flex items-center justify-center">
           <img
             src={project.image || "/placeholder.svg"}
             alt={`Screenshot do projeto ${project.title}`}

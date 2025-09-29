@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ProjectCard } from "@/components/project/project-card"
+import { Carousel } from "@/components/ui/carousel"
 import Link from "next/link"
 import { ArrowRight, Code, Users, Trophy, BookOpen, GraduationCap } from "lucide-react"
 import { tccProjects } from "@/lib/data/data"
@@ -115,11 +116,19 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {tccProjects.slice(0, 3).map((project) => (
-              <ProjectCard key={project.id} project={project} variant="default" />
+          <Carousel
+            itemsPerView={{ mobile: 1, tablet: 2, desktop: 3 }}
+            showArrows={true}
+            showDots={true}
+            autoplay={true}
+            autoplayInterval={5000}
+            gap={24}
+            className="mb-16"
+          >
+            {tccProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} variant="detailed" />
             ))}
-          </div>
+          </Carousel>
 
           <div className="text-center">
             <Button asChild size="lg" className="glass hover-lift shadow-glow">

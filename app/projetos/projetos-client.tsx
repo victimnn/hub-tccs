@@ -15,7 +15,7 @@ export function ProjetosClient() {
   const [searchTerm, setSearchTerm] = useState("")
   const [categoryFilter, setCategoryFilter] = useState("all")
   const [yearFilter, setYearFilter] = useState("all")
-  const [viewMode, setViewMode] = useState<"carousel" | "grid">("carousel")
+  const [viewMode, setViewMode] = useState<"carousel" | "grid">("grid")
 
   const filteredProjects = useMemo(() => {
     let filtered = tccProjects
