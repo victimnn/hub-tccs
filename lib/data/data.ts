@@ -6,42 +6,50 @@ export const tccProjects: TCCProject[] = [
     id: 1,
     title: "BusHere!",
     description: "Plataforma de gestão integrada de logística sobre rotas, pontos, passageiros e veículos.",
-    fullDescription: `"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    fullDescription: `O projeto BusHere! nasceu para transformar a forma como empresas de transporte e logística de passageiros operam. Inicialmente desenvolvido para a Giraldi, empresa localizada em Pedreira, o sistema surge como resposta aos desafios causados pela dependência de processos manuais: contratos lentos e suscetíveis a erros, comunicação ineficaz com os passageiros e uma logística complexa que sobrecarrega a equipe.
 
-    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem 
-    quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi 
-    tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem 
-    ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in 
-    ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"`,
-    image: "/etec-predio.jpg",
+Pensado a partir de um levantamento de requisitos em conjunto com a Giraldi, o BusHere! foi projetado para ser muito mais do que uma solução pontual. Sua arquitetura é adaptável e escalável, possibilitando a aplicação em diversas empresas do setor.
+
+O objetivo é claro: automatizar processos críticos, otimizar a gestão do transporte, melhorar a experiência dos usuários e reduzir a sobrecarga de trabalho.
+
+Para isso, a solução tecnológica se divide em dois pilares:
+
+Sistema Web para gestores: administração de passageiros, rotas e pontos com agilidade e precisão.
+
+Aplicativo Mobile para passageiros: acesso fácil a informações de rotas, itinerários e gerenciamento de dados pessoais.
+
+Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais eficiente, ágil e inteligente, capaz de elevar o padrão do transporte de passageiros.`,
+    image: "/bushere/logo.jpg",
     gallery: [
-      "/etec-predio.jpg",
-      "/etec-predio.jpg",
+      "/bushere/bushere-1.png",
+      "/bushere/bushere-2.png",
+      "/bushere/bushere-3.png",
+      "/bushere/bushere-4.png",
+      "/bushere/bushere-5.png",
     ],
-    technologies: ["React", "Node.js", "MySQL", "expressJS"],
+    technologies: ["React", "Node.js", "MySQL", "expressJS", "Git", "Figma", "Bootstrap", "Cursor", "CodeRabbit"],
     members: [
-      {
-        name: "Victor Ramos",
-        role: "Full Stack Developer & Designer & Banco de Dados",
-        photo: "/professional-woman-developer.png",
-        linkedin: "https://linkedin.com/in/victor-ramos",
-        email: "victor.ramosp19@gmail.com",
-        location: "Jaguariúna, SP",
-        about: "-",
-        career: "-",
-        expertise: "Frontend Development, UI/UX Design, React, Node.js, MySQL",
-        skills: ["React", "TypeScript", "Node.js", "MySQL", "Figma", "Git"],
-        achievements: [
-          "Lider do projeto BusHere!",
-          "-",
-          "-",
-        ],
-      },
+        {
+          name: "Victor Ramos",
+          role: "Full Stack Developer & Designer & Banco de Dados",
+          photo: "/bushere/victor.png",
+          linkedin: "https://linkedin.com/in/victor-ramos",
+          email: "victor.ramosp19@gmail.com",
+          location: "Jaguariúna - SP",
+          about: `Desenvolvedor Full Stack em formação, com experiência em backend, frontend e bancos de dados.
+           Busco constantemente aprimorar minhas competências técnicas e acompanhar as tendências do mercado, aplicando boas práticas de desenvolvimento, arquitetura de software e metodologias ágeis.`,
+          career: `Atuo como líder e desenvolvedor do projeto BusHere! e outras aplicações web como este site, 
+          com foco em criar soluções escaláveis, seguras e de fácil manutenção. Tenho 
+          interesse em áreas como cloud computing, integração de sistemas, automação e 
+          inteligência artificial, visando unir prática acadêmica e profissional para entregar resultados de impacto`,
+          expertise: "Frontend Development, UI/UX Design, React, Node.js, MySQL",
+          skills: ["React", "TypeScript", "Node.js", "MySQL", "Figma", "Git"],
+          achievements: [
+            "Líder & FullStack Developer do projeto BusHere!.",
+            "Desenvolvedor de 10+ projetos autorais e co-autorais.",
+            "Social Media Manager do @ds.etec",
+          ],
+        },
       {
         name: "Renan Andrade",
         role: "Backend Developer",

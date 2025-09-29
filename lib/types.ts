@@ -10,6 +10,7 @@ export interface TeamMember {
   expertise: string
   skills?: string[]
   achievements?: string[]
+  instagram?: string
 }
 
 export interface Advisor {
