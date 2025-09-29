@@ -16,7 +16,7 @@ export function ProjectInfo({ project, variant = 'sidebar' }: ProjectInfoProps) 
         <div className="space-y-3">
           <div className="flex justify-between">
             <span className="text-muted-foreground">Categoria:</span>
-            <span>{project.category}</span>
+            <span>{project.category.join(', ')}</span>
           </div>
           <div className="flex justify-between">
             <span className="text-muted-foreground">Ano:</span>
@@ -45,7 +45,7 @@ export function ProjectInfo({ project, variant = 'sidebar' }: ProjectInfoProps) 
               <Code className="h-5 w-5 text-primary" />
               <div>
                 <p className="text-sm text-muted-foreground">Categoria</p>
-                <p className="font-semibold">{project.category}</p>
+                <p className="font-semibold">{project.category.join(', ')}</p>
               </div>
             </div>
             
@@ -79,7 +79,7 @@ export function ProjectInfo({ project, variant = 'sidebar' }: ProjectInfoProps) 
       <div className="flex items-center gap-2">
         <Code className="h-4 w-4 text-muted-foreground" />
         <span className="text-muted-foreground">Categoria:</span>
-        <span>{project.category}</span>
+        <span>{project.category.join(', ')}</span>
       </div>
       
       <div className="flex items-center gap-2">

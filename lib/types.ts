@@ -41,7 +41,7 @@ export interface TCCProject {
   members: TeamMember[]
   advisor: Advisor
   year: string
-  category: 'Web' | 'Mobile' | 'Desktop'
+  category: string[]
   features?: string[]
   links?: ProjectLinks
 }

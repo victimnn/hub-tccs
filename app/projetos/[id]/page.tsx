@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button"
 import { ProjectTeam } from "@/components/project/project-team"
 import { ProjectTechnologies } from "@/components/project/project-technologies"
 import { ProjectInfo } from "@/components/project/project-info"
+import { ImageGallery } from "@/components/project/image-gallery"
+import { ShareButtons } from "@/components/project/share-buttons"
 import Link from "next/link"
 import { ArrowLeft, ExternalLink, Github, Globe, Download, Play, ImageIcon, Calendar } from "lucide-react"
 import { notFound } from "next/navigation"
@@ -74,7 +76,11 @@ export default function TCCDetailsPage({ params }: PageProps) {
               {/* Conteúdo principal */}
               <div className="xl:col-span-2">
                 <div className="flex items-center gap-4 mb-3">
-                  <Badge variant="secondary">{project.category}</Badge>
+                  <div className="flex gap-2">
+                    {project.category.map((cat, index) => (
+                      <Badge key={index} variant="secondary">{cat}</Badge>
+                    ))}
+                  </div>
                   <div className="flex items-center gap-2 text-muted-foreground">
                     <Calendar className="h-4 w-4" />
                     <span>{project.year}</span>
@@ -115,8 +121,8 @@ export default function TCCDetailsPage({ params }: PageProps) {
                 </div>
 
                 {/* Imagem principal integrada */}
-                <div className="aspect-video bg-muted rounded-lg overflow-hidden mb-6">
-                  <img src={project.image || "/placeholder.svg"} alt={project.title} className="w-full h-full object-cover" />
+                <div className="aspect-video bg-muted rounded-lg overflow-hidden mb-6 flex items-center justify-center">
+                  <img src={project.image || "/placeholder.svg"} alt={project.title} className="max-w-full max-h-full object-contain" />
                 </div>
 
                 {/* Sobre o Projeto - Logo abaixo da imagem */}
@@ -174,17 +180,10 @@ export default function TCCDetailsPage({ params }: PageProps) {
                     <ImageIcon className="mr-2 h-5 w-5" />
                     Galeria de Imagens
                   </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {project.gallery.map((image, index) => (
-                      <div key={index} className="aspect-video bg-muted rounded-lg overflow-hidden">
-                        <img
-                          src={image || "/placeholder.svg"}
-                          alt={`${project.title} - Imagem ${index + 1}`}
-                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    ))}
-                  </div>
+                  <ImageGallery 
+                    images={project.gallery} 
+                    projectTitle={project.title}
+                  />
                 </section>
               )}
             </div>
@@ -194,16 +193,10 @@ export default function TCCDetailsPage({ params }: PageProps) {
               <Card>
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-4">Compartilhar</h3>
-                  <div className="flex gap-2">
-                    <Button size="sm" variant="outline" className="flex-1">
-                      <Globe className="mr-2 h-4 w-4" />
-                      Link
-                    </Button>
-                    <Button size="sm" variant="outline" className="flex-1">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Compartilhar
-                    </Button>
-                  </div>
+                  <ShareButtons 
+                    projectTitle={project.title}
+                    projectDescription={project.description}
+                  />
                 </CardContent>
               </Card>
             </div>

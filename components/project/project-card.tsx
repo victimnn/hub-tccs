@@ -14,16 +14,20 @@ export function ProjectCard({ project, variant = 'default' }: ProjectCardProps) 
   const renderCompact = () => (
     <Card className="group hover-lift shadow-glow glass overflow-hidden">
       <CardContent className="p-0">
-        <div className="aspect-video bg-muted overflow-hidden relative">
+        <div className="aspect-video bg-muted overflow-hidden relative flex items-center justify-center">
           <img
             src={project.image || "/placeholder.svg"}
             alt={`Screenshot do projeto ${project.title}`}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
           />
           <div className="absolute top-3 right-3">
-            <Badge variant="secondary" className="text-xs glass">
-              {project.category}
-            </Badge>
+            <div className="flex gap-1">
+              {project.category.map((cat, index) => (
+                <Badge key={index} variant="secondary" className="text-xs glass">
+                  {cat}
+                </Badge>
+              ))}
+            </div>
           </div>
         </div>
         <div className="p-5">
@@ -54,16 +58,20 @@ export function ProjectCard({ project, variant = 'default' }: ProjectCardProps) 
   const renderDefault = () => (
     <Card className="group hover-lift shadow-glow glass overflow-hidden">
       <CardContent className="p-0">
-        <div className="aspect-video bg-muted overflow-hidden relative">
+        <div className="aspect-video bg-muted overflow-hidden relative flex items-center justify-center">
           <img
             src={project.image || "/placeholder.svg"}
             alt={`Screenshot do projeto ${project.title}`}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
           />
           <div className="absolute top-4 right-4">
-            <Badge variant="secondary" className="text-xs glass">
-              {project.category}
-            </Badge>
+            <div className="flex gap-1">
+              {project.category.map((cat, index) => (
+                <Badge key={index} variant="secondary" className="text-xs glass">
+                  {cat}
+                </Badge>
+              ))}
+            </div>
           </div>
           <div className="absolute bottom-4 left-4">
             <div className="flex items-center gap-2 text-xs text-white bg-black/50 px-2 py-1 rounded-md">
@@ -106,16 +114,18 @@ export function ProjectCard({ project, variant = 'default' }: ProjectCardProps) 
   const renderDetailed = () => (
     <Card className="group hover-lift shadow-glow glass overflow-hidden h-full flex flex-col">
       <CardContent className="p-0 flex flex-col h-full">
-        <div className="aspect-video bg-muted overflow-hidden relative">
+        <div className="aspect-video bg-muted overflow-hidden relative flex items-center justify-center">
           <img
             src={project.image || "/placeholder.svg"}
             alt={`Screenshot do projeto ${project.title}`}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
           />
           <div className="absolute top-4 left-4 flex gap-2">
-            <Badge variant="secondary" className="text-xs glass">
-              {project.category}
-            </Badge>
+            {project.category.map((cat, index) => (
+              <Badge key={index} variant="secondary" className="text-xs glass">
+                {cat}
+              </Badge>
+            ))}
           </div>
           <div className="absolute bottom-4 right-4">
             <div className="flex items-center gap-2 text-xs text-white bg-black/50 px-2 py-1 rounded-md">

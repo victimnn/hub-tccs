@@ -23,7 +23,7 @@ export const tccProjects: TCCProject[] = [
       "/etec-predio.jpg",
       "/etec-predio.jpg",
     ],
-    technologies: ["React", "Node.js", "MySQL", "Express"],
+    technologies: ["React", "Node.js", "MySQL", "expressJS"],
     members: [
       {
         name: "Victor Ramos",
@@ -114,7 +114,7 @@ export const tccProjects: TCCProject[] = [
     ],
     advisor: advisors[0],
     year: "2025",
-    category: "Web",
+    category: ["Web","Mobile"],
     features: [
       "Gestão de Veículos, Passageiros, Rotas e Pontos",
       "Portal do passageiro e responsável",
@@ -123,67 +123,120 @@ export const tccProjects: TCCProject[] = [
       "Sistema de notificações",
       "Dashboard administrativo",
     ],
-    links: {
-      demo: "https://demo-escola.vercel.app",
-      github: "https://github.com/etec-tcc/sistema-escolar",
-      documentation: "/docs/sistema-escolar.pdf",
-    },
   },
   {
     id: 2,
-    title: "E-commerce Sustentável",
-    description: "Marketplace focado em produtos ecológicos com sistema de pontuação verde e rastreamento de impacto ambiental.",
-    image: "/sustainable-ecommerce.png",
-    technologies: ["Next.js", "Python", "PostgreSQL", "Stripe", "Docker"],
+    title: "Workfy",
+    description: "Plataforma de empregos com ênfase na empregabilidade freelancer",
+    fullDescription: `Este projeto propõe o desenvolvimento de um site de vagas de emprego com um diferencial: a ênfase na empregabilidade freelancer, funcionando de forma semelhante a plataformas como InfoJobs, Gupy e Indeed. O objetivo principal do software é facilitar, de maneira segura, organizada e ágil, a conexão entre candidatos que buscam oportunidades de trabalho e empresas que necessitam contratar profissionais para diferentes modalidades de serviço. 
+    O sistema busca solucionar o problema da informalidade e da desorganização na busca por empregos temporários e freelances, além de reduzir as dificuldades enfrentadas tanto por empresas quanto por trabalhadores na hora de encontrar, selecionar e se comunicar com perfis compatíveis às suas necessidades. Para isso, o site oferecerá funcionalidades como: login com CPF (para candidatos) e CNPJ (para empresas), criação de currículos online (visíveis apenas para as empresas), e um chat interno em que as empresas poderão iniciar conversas com os candidatos selecionados, com histórico de mensagens salvo — permitindo uma interação direta entre as partes interessadas. 
+    A justificativa para o desenvolvimento deste software está no aumento da demanda por trabalhos flexíveis e na carência de plataformas digitais acessíveis e objetivas voltadas para esse público. O sistema também contemplará jovens a partir de 14 anos interessados em vagas de jovem aprendiz, promovendo a inclusão desse público no mercado de trabalho. 
+    Entre os benefícios proporcionados pelo software, destacam-se: agilidade na contratação de serviços, maior organização das informações dos candidatos, proteção de dados pessoais e melhora na comunicação entre empresa e candidato, evitando ruídos ou excesso de mensagens indevidas. 
+    O público-alvo da aplicação compreende dois grupos principais: os candidatos (freelancers, jovens e adultos em busca de oportunidades) e as empresas que necessitam contratar trabalhadores em diferentes modalidades. Ambos serão beneficiados com o uso da plataforma, que proporcionará mais eficiência, praticidade e segurança em todo o processo de contratação. 
+    A metodologia adotada baseia-se no levantamento de requisitos funcionais e não funcionais junto a potenciais usuários, com apoio de métodos ágeis de desenvolvimento e uso de tecnologias web modernas. A implantação inicial do software será voltada para ambientes urbanos e centros comerciais — locais com maior demanda por contratações pontuais e alta rotatividade de vagas.`,
+    gallery: [
+      "/workfy/workfy-1.png",
+      "/workfy/workfy-2.png",
+      "/workfy/workfy-3.png",
+    ],
+    image: "/workfy/workfy-logo.png",
+    technologies: ["Laravel", "PHP", "MySQL", "expressJS", "nodeJS"],
     members: [
       {
-        name: "João Pedro",
-        role: "Full Stack Developer",
-        photo: "/placeholder-user.jpg",
-        linkedin: "https://linkedin.com/in/joao-pedro",
-        email: "joao.pedro@email.com",
-        location: "São Paulo, SP",
-        about: "Desenvolvedor especializado em e-commerce e sustentabilidade com foco em soluções inovadoras para o mercado verde.",
-        career: "Atua como Full Stack Developer em startups de impacto ambiental, desenvolvendo plataformas sustentáveis.",
-        expertise: "E-commerce, Python, PostgreSQL, Sustainability Tech",
-        skills: ["Next.js", "Python", "PostgreSQL", "Stripe", "Docker"],
+        name: "Murilo Iossi",
+        role: "Full Stack Developer & Database",
+        photo: "/workfy/murilo.jpg",
+        linkedin: "https://www.linkedin.com/in/murilo-iossi/",
+        email: "iossimurilo@gmail.com",
+        location: "Jaguariúna – SP",
+        about: "Desenvolvedor Full Stack especializado em desenvolvimento backend, frontend e banco de dados.",
+        career: "Atua como líder e desenvolvedor Full Stack em projetos de TCC e desenvolvimento web.",
+        expertise: "Back end development, front end development, Database development",
+        skills: ["C#", "PHP"],
         achievements: [
-          "Desenvolveu 3 marketplaces sustentáveis",
-          "Especialização em Green Tech",
-          "Palestrante em eventos de sustentabilidade",
+          "Líder e Full Stack do projeto de TCC WorkFy",
+          "Dev Full Stack do WebStufa Angiosperma",
+          "Dev front end do WebZoo",
         ],
       },
       {
-        name: "Fernanda Costa",
-        role: "Backend Developer",
-        photo: "/placeholder-user.jpg",
-        linkedin: "https://linkedin.com/in/fernanda-costa",
-        email: "fernanda.costa@email.com",
-        location: "São Paulo, SP",
-        about: "Especialista em sistemas de pagamento e APIs com experiência em fintechs e soluções financeiras sustentáveis.",
-        career: "Desenvolve soluções financeiras para empresas de impacto social e ambiental.",
-        expertise: "Payment Systems, APIs, PostgreSQL, Financial Tech",
-        skills: ["Python", "FastAPI", "PostgreSQL", "Stripe", "Redis"],
+        name: "Valentina Bastos",
+        role: "Designer & Front-end & Backup",
+        photo: "/workfy/valentina.jpg",
+        linkedin: "https://www.linkedin.com/in/valentina-bastos-de-souza-43795136b/",
+        email: "valentinabastosdesouza@gmail.com",
+        location: "Amparo – SP",
+        about: "Designer e desenvolvedora frontend especializada em design, documentação e gestão de projetos.",
+        career: "Atua como designer e desenvolvedora frontend em projetos web e de TCC.",
+        expertise: "Designer, Front-end, documentação, gestão",
+        skills: ["HTML e CSS", "Figma", "PHP"],
         achievements: [
-          "Implementou sistemas de pagamento para 10+ empresas",
-          "Especialista em APIs de pagamento",
-          "Certificação em Fintech",
+          "Designer do projeto Webstufa",
+          "Designer do projeto Webzoo",
+          "Designer e Front end do projeto de TCC Workfy",
+        ],
+      },
+      {
+        name: "Marcos Brolezi",
+        role: "Documentação & testes do Software",
+        photo: "/workfy/marcos.jpg",
+        linkedin: "https://www.linkedin.com/in/marcos-santos-957ba136b",
+        email: "marcos981@gmail.com",
+        location: "Amparo – SP",
+        about: "Especialista em documentação e testes de software com experiência em design e marketing.",
+        career: "Atua na documentação e testes de qualidade de software, além de marketing esportivo.",
+        expertise: "Design, Front End, Documentação, Testes de qualidade",
+        skills: ["Word", "Canvas", "HTML", "CSS", "Javascript"],
+        achievements: [
+          "Documentação e testes do projeto de TCC WorkFy",
+          "Marketing do handebol amparo",
+          "Desenvolvimento de uniformes para o handebol amparo",
+        ],
+      },
+      {
+        name: "Luan Chilaver",
+        role: "Banco de dados & Full Stack",
+        photo: "/workfy/luan.jpg",
+        linkedin: "https://www.linkedin.com/in/luan-chilaver-24bb7036b/",
+        email: "luanhchilaver@gmail.com",
+        location: "Amparo – SP",
+        about: "Desenvolvedor Full Stack especializado em banco de dados e desenvolvimento frontend.",
+        career: "Atua como desenvolvedor Full Stack com foco em banco de dados e frontend.",
+        expertise: "Front End development",
+        skills: ["PHP", "Python", "Javascript", "HTML", "CSS"],
+        achievements: [
+          "Projeto blog de noticias",
+          "Projeto calculadora",
+          "Banco de dados e front end do projeto de TCC Workfy",
+        ],
+      },
+      {
+        name: "Micaelly Mariano",
+        role: "Desenvolvedora Fullstack",
+        photo: "/workfy/micaelly.jpg",
+        linkedin: "https://www.linkedin.com/in/micaelly-mariano-632767269",
+        email: "micaellyvitoriaferrreira@gmail.com",
+        location: "Amparo – SP",
+        about: "Desenvolvedora Fullstack especializada em Frontend, Backend e Migrations com Banco de Dados.",
+        career: "Atua como desenvolvedora Fullstack responsável pela codificação em projetos de TCC.",
+        expertise: "Desenvolvimento Web (Frontend e Backend), UI Design",
+        skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "MySQL", "Laravel", "PHP"],
+        achievements: [
+          "Desenvolvedora Fullstack e responsável pela codificação no TCC Workfy",
         ],
       },
     ],
-    advisor: advisors[1],
-    year: "2024",
-    category: "Web",
+    advisor: advisors[0],
+    year: "2025",
+    category: ["Web","Mobile"],
     features: [
-      "Sistema de pontuação verde",
-      "Rastreamento de impacto ambiental",
-      "Marketplace de produtos ecológicos",
-      "Sistema de avaliação sustentável",
-      "Relatórios de pegada de carbono",
+      "Login com CPF (para candidatos) e CNPJ (para empresas)",
+      "Criação automática de currículos online (visíveis apenas para as empresas)",
+      "Chat interno em que as empresas poderão iniciar conversas com os candidatos selecionados, com histórico de mensagens salvo",
+      "Maior organização das informações dos candidatos",
+      "Proteção de dados pessoais",
+      "Melhora na comunicação entre empresa e candidato",
     ],
-    links: {
-      github: "https://github.com/etec-tcc/ecommerce-sustentavel",
-    },
   },
   {
     id: 3,
@@ -229,7 +282,7 @@ export const tccProjects: TCCProject[] = [
     ],
     advisor: advisors[2],
     year: "2024",
-    category: "Mobile",
+    category: ["Mobile","Web"],
     features: [
       "Acompanhamento de humor diário",
       "Sessões de meditação guiada",
@@ -287,7 +340,7 @@ export const tccProjects: TCCProject[] = [
     ],
     advisor: advisors[3],
     year: "2023",
-    category: "Web",
+    category: ["Web","Mobile"],
     features: [
       "Gestão de acervo digital",
       "Sistema de empréstimos online",
@@ -345,7 +398,7 @@ export const tccProjects: TCCProject[] = [
     ],
     advisor: advisors[0],
     year: "2023",
-    category: "Mobile",
+    category: ["Mobile"],
     features: [
       "Controle de gastos por categoria",
       "Categorização automática",
@@ -402,7 +455,7 @@ export const tccProjects: TCCProject[] = [
     ],
     advisor: advisors[1],
     year: "2023",
-    category: "Web",
+    category: ["Web"],
     features: [
       "Painel administrativo completo",
       "App mobile para clientes",
@@ -460,7 +513,7 @@ export const tccProjects: TCCProject[] = [
     ],
     advisor: advisors[2],
     year: "2024",
-    category: "Mobile",
+    category: ["Mobile"],
     features: [
       "Sugestão inteligente de receitas",
       "Análise de ingredientes disponíveis",
@@ -517,7 +570,7 @@ export const tccProjects: TCCProject[] = [
     ],
     advisor: advisors[3],
     year: "2023",
-    category: "Web",
+    category: ["Web"],
     features: [
       "Agendamento online de consultas",
       "Integração com calendário",
@@ -539,7 +592,9 @@ export const getProjectById = (id: number): TCCProject | undefined => {
 
 export const getProjectsByCategory = (category: string): TCCProject[] => {
   if (category === 'all') return tccProjects
-  return tccProjects.filter(project => project.category.toLowerCase() === category.toLowerCase())
+  return tccProjects.filter(project => 
+    project.category.some(cat => cat.toLowerCase() === category.toLowerCase())
+  )
 }
 
 export const getProjectsByYear = (year: string): TCCProject[] => {

@@ -34,7 +34,7 @@ export function ProjetosClient() {
     // Aplicar filtro de categoria
     if (categoryFilter !== "all") {
       filtered = filtered.filter(project => 
-        project.category.toLowerCase() === categoryFilter.toLowerCase()
+        project.category.some(cat => cat.toLowerCase() === categoryFilter.toLowerCase())
       )
     }
 
