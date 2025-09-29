@@ -343,7 +343,13 @@ export const tccProjects: TCCProject[] = [
     fullDescription: `A Libras é a língua oficial da comunidade surda no Brasil, reconhecida pela Lei nº 10.436 de 2002, um marco muito importante para garantir os direitos da comunidade surda.
     Mesmo assim, ainda existem muitos desafios relacionados à inclusão, já que o preconceito e a falta de conscientização sobre a Libras e a cultura surda ainda são grandes.
     Pensando nisso, desenvolvemos o Handly, um software educativo voltado para quem tem interesse em aprender Libras. O sistema oferece um dicionário interativo e atividades práticas organizadas em uma trilha de aprendizagem, com tarefas e categorias que ajudam o usuário a aprender de forma clara, prática e acessível.`,
-    image: "/placeholder.svg",
+    image: "/handly/handly.jpg",
+    gallery: [
+      "/handly/handly-1.jpg",
+      "/handly/handly-2.jpg",
+      "/handly/handly-3.jpg",
+      "/handly/handly-4.jpg",
+    ],
     technologies: ["MySQL", "PHP", "GitHub"],
     members: [
       {
