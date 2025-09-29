@@ -3,6 +3,7 @@ export interface TeamMember {
   role: string
   photo: string
   linkedin?: string
+  github?: string
   email?: string
   location?: string
   about: string
@@ -28,6 +29,7 @@ export interface Advisor {
 export interface ProjectLinks {
   demo?: string
   github?: string
+  github2?: string
   documentation?: string
 }
 

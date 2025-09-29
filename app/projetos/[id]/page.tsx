@@ -110,6 +110,15 @@ export default function TCCDetailsPage({ params }: PageProps) {
                     </Button>
                   )}
 
+                  {project.links?.github2 && (
+                    <Button variant="outline" asChild size="sm">
+                      <a href={project.links.github2} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 h-4 w-4" />
+                        Código Mobile
+                      </a>
+                    </Button>
+                  )}
+
                   {project.links?.documentation && (
                     <Button variant="outline" asChild size="sm">
                       <a href={project.links.documentation} target="_blank" rel="noopener noreferrer">

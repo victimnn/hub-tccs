@@ -7,7 +7,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import { Linkedin, Mail, MapPin, Briefcase, User, Award, Instagram } from "lucide-react"
+import { Linkedin, Mail, MapPin, Briefcase, User, Award, Instagram, Github } from "lucide-react"
 import type { TeamMember } from "@/lib/types"
 
 interface TeamMemberPopupProps {
@@ -52,6 +52,15 @@ export function TeamMemberPopup({ member, children }: TeamMemberPopupProps) {
                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
                       <Linkedin className="mr-2 h-4 w-4" />
                       LinkedIn
+                    </a>
+                  </Button>
+                )}
+
+                {member.github && (
+                  <Button size="sm" variant="outline" asChild>
+                    <a href={member.github} target="_blank" rel="noopener noreferrer">
+                      <Github className="mr-2 h-4 w-4" />
+                      GitHub
                     </a>
                   </Button>
                 )}
