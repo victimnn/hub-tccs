@@ -95,19 +95,6 @@ export function ProjetosClient() {
                 </SelectContent>
               </Select>
 
-              <Select value={yearFilter} onValueChange={setYearFilter}>
-                <SelectTrigger className="w-[120px]" aria-label="Filtrar por ano">
-                  <Calendar className="h-4 w-4 mr-2" />
-                  <SelectValue placeholder="Ano" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">Todos</SelectItem>
-                  {uniqueYears.map(year => (
-                    <SelectItem key={year} value={year}>{year}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
-
               {/* View Mode Toggle */}
               <div className="flex border rounded-md">
                 <Button
