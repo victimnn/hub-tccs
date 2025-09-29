@@ -31,7 +31,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
     members: [
         {
           name: "Victor Ramos",
-          role: "Full Stack Developer & Designer & Banco de Dados",
+          role: "Full Stack Developer, Scrum Master, Designer, Banco de Dados",
           photo: "/bushere/victor.png",
           linkedin: "https://linkedin.com/in/victor-ramos",
           email: "victor.ramosp19@gmail.com",
@@ -52,7 +52,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
         },
         {
           name: "Luiz Souza",
-          role: "Frontend Developer & UI/UX Designer",
+          role: "Frontend Developer, UI/UX Designer",
           photo: "/professional-man-frontend-developer.png",
           linkedin: "https://linkedin.com/in/luiz-souza",
           email: "luiz.souza@email.com",
@@ -254,6 +254,18 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
     Com funcionalidades como cadastro de cargas, veículos e clientes, simulação 3D de carregamento e geração de relatórios, a solução visa aumentar a eficiência, segurança e pontualidade. Integrando inteligência artificial, a plataforma facilita o trabalho de transportadoras e caminhoneiros, melhorando a produtividade.`,
     image: "/transportAi/logo.jpg",
     technologies: ["Flutter", "PHP", "Node.js", "Laravel", "MySQL", "JavaScript"],
+    gallery: [
+      "/transportAi/transportai-1.jpeg",
+      "/transportAi/transportai-2.jpeg",
+      "/transportAi/transportai-3.jpeg",
+      "/transportAi/transportai-4.jpeg",
+      "/transportAi/transportai-5.jpeg",
+      "/transportAi/transportai-6.jpeg",
+      "/transportAi/transportai-7.jpeg",
+      "/transportAi/transportai-8.jpeg",
+      "/transportAi/transportai-9.jpeg",
+      "/transportAi/transportai-10.jpeg",
+    ],
     members: [
       {
         name: "Murilo Fornel de Almeida",
@@ -272,17 +284,17 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
       },
       {
         name: "Lucy Pereira Piza",
-        role: "Desenvolvedora",
-        photo: "/placeholder-user.jpg",
-        linkedin: "",
-        email: "",
-        location: "Amparo, SP",
-        about: "Desenvolvedora do projeto TransportAI, sistema de gestão logística com IA.",
-        career: "Atua no desenvolvimento de sistemas de gestão logística e inteligência artificial.",
-        expertise: "Desenvolvimento Web, Mobile, IA",
-        skills: ["Flutter", "PHP", "Node.js", "Laravel", "MySQL", "JavaScript"],
+        role: "Documentação e Prototipagem de Telas",
+        photo: "/transportAi/lucy.jpeg",
+        linkedin: "http://linkedin.com/in/lucy-piza",
+        email: "llucy.psz@gmail.com",
+        location: "Monte Alegre do Sul, SP",
+        about: "Responsável pela documentação e prototipagem de telas do projeto TransportAI, sistema de gestão logística com IA. Especializada em UI/UX Design e criação de interfaces.",
+        career: "Atua na área de documentação técnica e design de interfaces, focando em criar experiências de usuário intuitivas e bem documentadas.",
+        expertise: "UI/UX Design, Figma",
+        skills: ["Figma"],
         achievements: [
-          "Desenvolvedora do projeto TransportAI",
+          "Responsável pela documentação do TransportAI",
         ],
       },
       {
