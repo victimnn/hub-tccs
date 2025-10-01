@@ -806,6 +806,10 @@ Um dos grandes diferenciais é a funcionalidade de currículo inteligente com IA
 Além disso, a plataforma promove um ambiente colaborativo, onde programadores podem estar sempre atualizados sobre o mercado e aumentar suas chances de inserção ou crescimento profissional.`,
     image: "/employability/logo.svg",
     imageZoom: 250,
+    gallery: [
+      "/employability/employability-1.jpg",
+      "/employability/employability-2.jpg	",
+    ],
     technologies: ["Laravel", "MySQL", "Pusher", "JavaScript"],
     members: [
       {
