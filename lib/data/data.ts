@@ -798,7 +798,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
   {
     id: 8,
     title: "EmployabilityCore",
-    description: "Um site focado em conexões profissionais voltado a programadores, com seu currículo online",
+    description: "Plataforma que conecta programadores a oportunidades e permite criar currículo online.",
     fullDescription: `Nosso projeto é uma plataforma digital inovadora voltada exclusivamente para programadores e profissionais da área de tecnologia. O site tem como objetivo central conectar talentos e oportunidades, oferecendo um espaço onde desenvolvedores podem criar e manter seu currículo online, acompanhar as publicações e atualizações de empresas e buscar vagas de trabalho de forma prática e eficiente.
 
 Um dos grandes diferenciais é a funcionalidade de currículo inteligente com IA, que analisa o perfil do usuário e gera automaticamente um currículo personalizado e otimizado para o mercado de tecnologia, facilitando o destaque dos profissionais frente às empresas.
