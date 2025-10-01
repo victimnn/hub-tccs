@@ -7,6 +7,8 @@ import { Carousel } from "@/components/ui/carousel"
 import Link from "next/link"
 import { ArrowRight, Code, Users, Trophy, BookOpen, GraduationCap } from "lucide-react"
 import { tccProjects } from "@/lib/data/data"
+import { advisors } from "@/lib/data/advisors"
+import { AdvisorPopup } from "@/components/team/advisor-popup"
 import type { Metadata } from "next"
 import { Footer } from "@/components/layout/footer"
 
@@ -64,6 +66,56 @@ export default function HomePage() {
             <Button variant="outline" size="lg" className="text-lg px-8 glass hover-lift">
               <Link href="/sobre">Sobre o Curso</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Professores Orientadores */}
+      <section className="py-12 sm:py-16 md:py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-12 sm:mb-14 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-5 md:mb-6 text-primary">Professores Orientadores</h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              Conheça os professores que orientaram e apoiaram o desenvolvimento dos projetos
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {advisors.map((advisor) => (
+              <AdvisorPopup key={advisor.name} advisor={advisor}>
+                <Card className="glass hover-lift shadow-glow cursor-pointer transition-all duration-300 hover:shadow-xl">
+                  <CardContent className="p-8">
+                    <div className="flex items-center gap-6">
+                      <div className="relative">
+                        <img
+                          src={advisor.photo || "/placeholder.svg"}
+                          alt={advisor.name}
+                          className="w-20 h-20 rounded-full object-cover border-4 border-primary/20"
+                        />
+                        <div className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground rounded-full p-2">
+                          <GraduationCap className="h-4 w-4" />
+                        </div>
+                      </div>
+                      
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold mb-2">{advisor.name}</h3>
+                        <p className="text-muted-foreground mb-3">{advisor.title}</p>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {advisor.expertise.split(", ").slice(0, 3).map((skill, index) => (
+                            <Badge key={index} variant="secondary" className="text-xs">
+                              {skill}
+                            </Badge>
+                          ))}
+                        </div>
+                        <p className="text-sm text-muted-foreground line-clamp-2">
+                          {advisor.about}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </AdvisorPopup>
+            ))}
           </div>
         </div>
       </section>
