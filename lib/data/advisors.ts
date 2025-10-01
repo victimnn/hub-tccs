@@ -6,7 +6,6 @@ export const advisors: Advisor[] = [
     title: "Professor Orientador",
     photo: "/placeholder-user.jpg",
     email: "rubens.carlos@etec.sp.gov.br",
-    linkedin: "https://linkedin.com/in/rubens-castaldelli",
     department: "Desenvolvimento de Sistemas",
     about: "Professor com mais de 40 anos de experiência em desenvolvimento de software e arquitetura de sistemas. Especialista em metodologias ágeis, banco de dados e gestão de projetos de tecnologia.",
     expertise: "Desenvolvimento de Software, Arquitetura de Sistemas, Metodologias Ágeis, Banco de Dados",
