@@ -807,6 +807,7 @@ Além disso, a plataforma promove um ambiente colaborativo, onde programadores p
     image: "/employability/logo.svg",
     imageZoom: 250,
     gallery: [
+      "/employability/employability-0.jpg"
       "/employability/employability-1.jpg",
       "/employability/employability-2.jpg	",
     ],
