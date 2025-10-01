@@ -131,7 +131,11 @@ export default function TCCDetailsPage({ params }: PageProps) {
 
                 {/* Imagem principal integrada */}
                 <div className="aspect-video bg-white rounded-lg overflow-hidden mb-6 flex items-center justify-center">
-                  <img src={project.image || "/placeholder.svg"} alt={project.title} className="max-w-full max-h-full object-contain" />
+                  <img 
+                    src={project.image || "/placeholder.svg"} 
+                    alt={project.title} 
+                    className="max-w-full max-h-full object-contain" 
+                  />
                 </div>
 
                 {/* Sobre o Projeto - Logo abaixo da imagem */}

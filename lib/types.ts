@@ -47,6 +47,7 @@ export interface TCCProject {
   category: string[]
   features?: string[]
   links?: ProjectLinks
+  imageZoom?: number
 }
 
 export interface NavigationItem {

@@ -20,6 +20,7 @@ Aplicativo Mobile para passageiros: acesso fácil a informações de rotas, itin
 
 Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais eficiente, ágil e inteligente, capaz de elevar o padrão do transporte de passageiros.`,
     image: "/bushere/logo.jpg",
+    imageZoom: 150,
     gallery: [
       "/bushere/bushere-1.png",
       "/bushere/bushere-2.png",
@@ -151,6 +152,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
       "/workfy/workfy-3.png",
     ],
     image: "/workfy/workfy-logo.png",
+    imageZoom: 100,
     technologies: ["Laravel", "PHP", "MySQL", "expressJS", "nodeJS"],
     members: [
       {
@@ -488,6 +490,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
     description: "Software com ferramentas para o viajante, apoiando no planejamento completo de sua viagem.",
     fullDescription: `Este projeto tem como objetivo desenvolver um sistema web e mobile que auxilie no planejamento de viagens, oferecendo acesso a diversas funcionalidades em apenas um ambiente. A proposta surgiu a partir da constatação de que indivíduos que organizam suas viagens de maneira autônoma enfrentam dificuldades decorrentes da dispersão de informações relativas à hospedagem, transporte, pontos turísticos, câmbio, entre outros aspectos relevantes. Tal situação, além de demandar tempo excessivo, pode resultar em frustração e desorganização. O software visa tornar o processo mais eficaz centralizando esses dados, onde o usuário monta um roteiro personalizado, consulta mapas com pontos turísticos, compara hotéis, verifica voos, acompanha o clima e o câmbio de moedas, além de acessar conteúdos sobre o destino.`,
     image: "/agendAi/logo.png",
+    imageZoom: 160,
     gallery: [
       "/agendAi/agendai-1.png",
       "/agendAi/agendai-2.png",
@@ -710,6 +713,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
     fullDescription: `O nosso projeto tem como principal objetivo melhorar a promoção dos eventos da escola através da criação de um site dedicado. A ideia é transformar a forma como esses eventos são divulgados, garantindo uma comunicação mais simples, organizada e prática. Observamos que os meios de divulgação atuais não oferecem a estrutura necessária para uma promoção eficaz, resultando em um baixo alcance e pouca organização na divulgação.
     Com o site, queremos facilitar o processo para os organizadores, oferecendo uma plataforma onde os eventos possam ser inseridos e acessados com facilidade. A principal inovação está na automação da divulgação, que permitirá a atualização instantânea das informações, o envio de notificações automáticas aos participantes e a organização eficiente de todo o conteúdo. Além disso, a plataforma será intuitiva, acessível a todos os públicos e otimizada para que qualquer membro da comunidade escolar possa visualizar e se engajar com os eventos de maneira prática. Nosso projeto visa, assim, não só otimizar a gestão dos eventos, mas também modernizar a comunicação e aumentar o engajamento da escola como um todo.`,
     image: "/jbeventos/logo.jpg",
+    imageZoom: 200,
     technologies: ["Laravel", "PHP", "JavaScript", "Vite", "Tailwind CSS", "Livewire", "SQL"],
     members: [
       {
@@ -794,42 +798,73 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
   {
     id: 8,
     title: "EmployabilityCore",
-    description: "Plataforma completa de delivery com painel administrativo, app do cliente e sistema de rastreamento.",
-    image: "/placeholder.svg",
-    technologies: ["React", "Node.js", "MongoDB", "Socket.io", "Google Maps API"],
+    description: "Um site focado em conexões profissionais voltado a programadores, com seu currículo online",
+    fullDescription: `Nosso projeto é uma plataforma digital inovadora voltada exclusivamente para programadores e profissionais da área de tecnologia. O site tem como objetivo central conectar talentos e oportunidades, oferecendo um espaço onde desenvolvedores podem criar e manter seu currículo online, acompanhar as publicações e atualizações de empresas e buscar vagas de trabalho de forma prática e eficiente.
+
+Um dos grandes diferenciais é a funcionalidade de currículo inteligente com IA, que analisa o perfil do usuário e gera automaticamente um currículo personalizado e otimizado para o mercado de tecnologia, facilitando o destaque dos profissionais frente às empresas.
+
+Além disso, a plataforma promove um ambiente colaborativo, onde programadores podem estar sempre atualizados sobre o mercado e aumentar suas chances de inserção ou crescimento profissional.`,
+    image: "/employability/logo.svg",
+    imageZoom: 250,
+    technologies: ["Laravel", "MySQL", "Pusher", "JavaScript"],
     members: [
       {
-        name: "Diego Martins",
-        role: "Full Stack Developer",
-        photo: "/placeholder-user.jpg",
-        linkedin: "https://linkedin.com/in/diego-martins",
-        email: "diego.martins@email.com",
-        location: "São Paulo, SP",
-        about: "Especialista em sistemas de delivery e logística com experiência em plataformas de e-commerce e marketplace.",
-        career: "Desenvolve plataformas de entrega e sistemas logísticos para empresas de delivery.",
-        expertise: "Delivery Systems, Real-time Tracking, E-commerce",
-        skills: ["React", "Node.js", "MongoDB", "Socket.io", "Maps API"],
+        name: "Giovani Oliveira",
+        role: "Full Stack Developer & Designer",
+        photo: "/employability/giovani.png",
+        email: "giovani.oliveira1223@gmail.com",
+        location: "Pinhalzinho, SP",
+        about: "Gosto muito de jogos, cubo mágico e xadrez, além da paixão por computadores desde muito cedo, sempre busco melhorar naquilo que eu gosto de fazer.",
+        career: "Até o momento do meu 3º ano não possui experiências profissionais na área, porém irei continuar neste ramo pois sei que é aquilo que quero de verdade.",
+        expertise: "Front-End, UI/UX Design, Git, Multimedia Designer/Specialist",
+        skills: ["Front-End", "UI/UX Design", "Git", "Multimedia Design", "Laravel", "PHP", "MySQL", "JavaScript", "Pusher"],
         achievements: [
-          "Desenvolveu 4 plataformas de delivery",
-          "Especialista em sistemas logísticos",
-          "Consultor em otimização de entregas",
+          "Líder do projeto Employability Core",
         ],
       },
       {
-        name: "Juliana Pereira",
-        role: "Backend Developer",
+        name: "Atilio de Andrade",
+        role: "Full Stack Developer",
         photo: "/placeholder-user.jpg",
-        linkedin: "https://linkedin.com/in/juliana-pereira",
-        email: "juliana.pereira@email.com",
-        location: "São Paulo, SP",
-        about: "Especialista em sistemas de tempo real e comunicação com experiência em aplicações de rastreamento e notificações.",
-        career: "Desenvolve sistemas de rastreamento e comunicação em tempo real para aplicações de delivery.",
-        expertise: "Real-time Systems, Socket.io, MongoDB, Notification Systems",
-        skills: ["Node.js", "Socket.io", "MongoDB", "Redis", "WebSockets"],
+        linkedin: "",
+        email: "",
+        location: "",
+        about: "Desenvolvedor do projeto EmployabilityCore, plataforma de conexões profissionais para programadores.",
+        career: "Atua no desenvolvimento de sistemas web com foco em plataformas de networking profissional.",
+        expertise: "Full Stack Development, Laravel, MySQL",
+        skills: ["Laravel", "PHP", "MySQL", "JavaScript", "Pusher"],
         achievements: [
-          "Implementou sistemas de tempo real para 8+ apps",
-          "Especialista em WebSockets",
-          "Certificação em Real-time Systems",
+          "Desenvolvedor do projeto EmployabilityCore",
+        ],
+      },
+      {
+        name: "Enzo Arruda",
+        role: "Full Stack Developer",
+        photo: "/placeholder-user.jpg",
+        linkedin: "",
+        email: "",
+        location: "",
+        about: "Desenvolvedor do projeto EmployabilityCore, plataforma de conexões profissionais para programadores.",
+        career: "Atua no desenvolvimento de sistemas web com foco em plataformas de networking profissional.",
+        expertise: "Full Stack Development, Laravel, MySQL",
+        skills: ["Laravel", "PHP", "MySQL", "JavaScript", "Pusher"],
+        achievements: [
+          "Desenvolvedor do projeto EmployabilityCore",
+        ],
+      },
+      {
+        name: "Augusto Camargo",
+        role: "Full Stack Developer",
+        photo: "/placeholder-user.jpg",
+        linkedin: "",
+        email: "",
+        location: "",
+        about: "Desenvolvedor do projeto EmployabilityCore, plataforma de conexões profissionais para programadores.",
+        career: "Atua no desenvolvimento de sistemas web com foco em plataformas de networking profissional.",
+        expertise: "Full Stack Development, Laravel, MySQL",
+        skills: ["Laravel", "PHP", "MySQL", "JavaScript", "Pusher"],
+        achievements: [
+          "Desenvolvedor do projeto EmployabilityCore",
         ],
       },
     ],
@@ -837,17 +872,12 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
     year: "2025",
     category: ["Web"],
     features: [
-      "Painel administrativo completo",
-      "App mobile para clientes",
-      "Rastreamento em tempo real",
-      "Sistema de avaliações",
-      "Gestão de entregadores",
-      "Relatórios de performance",
+      "Currículo online para programadores",
+      "Conexões profissionais na área de tecnologia",
+      "Busca de vagas de trabalho",
+      "Acompanhamento de empresas",
+      "Ambiente colaborativo para programadores",
     ],
-    links: {
-      demo: "https://demo-delivery.vercel.app",
-      github: "https://github.com/etec-tcc/sistema-delivery",
-    },
   },
 ]
 

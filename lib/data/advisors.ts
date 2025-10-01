@@ -16,7 +16,7 @@ export const advisors: Advisor[] = [
     ],
   },
   {
-    name: "Dr. Emerson Rodrigo Baião",
+    name: "Prof. Emerson Rodrigo Baião",
     title: "Professor Orientador",
     photo: "/placeholder-user.jpg",
     email: "emerson.baiao@etec.sp.gov.br",

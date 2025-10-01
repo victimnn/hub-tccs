@@ -19,6 +19,7 @@ export function ProjectCard({ project, variant = 'default' }: ProjectCardProps) 
             src={project.image || "/placeholder.svg"}
             alt={`Screenshot do projeto ${project.title}`}
             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+            style={{ transform: `scale(${project.imageZoom ? project.imageZoom / 100 : 1})` }}
           />
           <div className="absolute top-3 right-3">
             <div className="flex gap-1">
@@ -63,6 +64,7 @@ export function ProjectCard({ project, variant = 'default' }: ProjectCardProps) 
             src={project.image || "/placeholder.svg"}
             alt={`Screenshot do projeto ${project.title}`}
             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+            style={{ transform: `scale(${project.imageZoom ? project.imageZoom / 100 : 1})` }}
           />
           <div className="absolute top-4 right-4">
             <div className="flex gap-1">
@@ -119,6 +121,7 @@ export function ProjectCard({ project, variant = 'default' }: ProjectCardProps) 
             src={project.image || "/placeholder.svg"}
             alt={`Screenshot do projeto ${project.title}`}
             className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+            style={{ transform: `scale(${project.imageZoom ? project.imageZoom / 100 : 1})` }}
           />
           <div className="absolute top-4 left-4 flex gap-2">
             {project.category.map((cat, index) => (
