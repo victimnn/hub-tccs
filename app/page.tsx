@@ -5,9 +5,9 @@ import { Badge } from "@/components/ui/badge"
 import { ProjectCard } from "@/components/project/project-card"
 import { Carousel } from "@/components/ui/carousel"
 import Link from "next/link"
-import { ArrowRight, Code, Users, Trophy, BookOpen, GraduationCap } from "lucide-react"
+import { ArrowRight, Code, Users, Trophy, BookOpen, GraduationCap, UserCheck } from "lucide-react"
 import { tccProjects } from "@/lib/data/data"
-import { advisors } from "@/lib/data/advisors"
+import { advisors, coordinator } from "@/lib/data/advisors"
 import { AdvisorPopup } from "@/components/team/advisor-popup"
 import type { Metadata } from "next"
 import { Footer } from "@/components/layout/footer"
@@ -66,6 +66,54 @@ export default function HomePage() {
             <Button variant="outline" size="lg" className="text-lg px-8 glass hover-lift">
               <Link href="/sobre">Sobre o Curso</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Coordenadora do Curso */}
+      <section className="py-12 sm:py-16 md:py-20 px-4 gradient-bg">
+        <div className="container mx-auto">
+          <div className="text-center mb-12 sm:mb-14 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-5 md:mb-6 text-primary">Coordenadora do Curso</h2>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+              Conheça a coordenadora responsável pela gestão e organização do curso
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <AdvisorPopup advisor={coordinator}>
+              <Card className="glass hover-lift shadow-glow cursor-pointer transition-all duration-300 hover:shadow-xl">
+                <CardContent className="p-8">
+                  <div className="flex flex-col md:flex-row items-center gap-8">
+                    <div className="relative">
+                      <img
+                        src={coordinator.photo || "/placeholder.svg"}
+                        alt={coordinator.name}
+                        className="w-32 h-32 rounded-full object-cover border-4 border-primary/20"
+                      />
+                      <div className="absolute -bottom-2 -right-2 bg-primary text-primary-foreground rounded-full p-3">
+                        <UserCheck className="h-6 w-6" />
+                      </div>
+                    </div>
+                    
+                    <div className="flex-1 text-center md:text-left">
+                      <h3 className="text-2xl md:text-3xl font-bold mb-3">{coordinator.name}</h3>
+                      <p className="text-lg text-muted-foreground mb-4">{coordinator.title}</p>
+                      <div className="flex flex-wrap gap-2 mb-6 justify-center md:justify-start">
+                        {coordinator.expertise.split(", ").map((skill, index) => (
+                          <Badge key={index} variant="secondary" className="text-sm">
+                            {skill}
+                          </Badge>
+                        ))}
+                      </div>
+                      <p className="text-base text-muted-foreground leading-relaxed">
+                        {coordinator.about}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </AdvisorPopup>
           </div>
         </div>
       </section>
@@ -177,7 +225,7 @@ export default function HomePage() {
             className="mb-16"
           >
             {tccProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} variant="detailed" />
+              <ProjectCard key={project.id} project={project} variant="detailed" inCarousel={true} />
             ))}
           </Carousel>
 

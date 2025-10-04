@@ -1,5 +1,20 @@
 import type { Advisor } from '../types'
 
+export const coordinator: Advisor = {
+  name: "Profª. Laine Zanin",
+  title: "Coordenadora do Curso",
+  photo: "/laine.png",
+  email: "elaine.almeida23@etec.sp.gov.br",
+  department: "Desenvolvimento de Sistemas",
+  about: "Coordenadora do curso Técnico em Desenvolvimento de Sistemas com mais de 5 anos de experiência em gestão educacional e desenvolvimento de software. Especialista em metodologias de ensino e coordenação de projetos tecnológicos.",
+  expertise: "Gestão Educacional, Desenvolvimento de Software, Metodologias de Ensino, Coordenação de Projetos",
+  achievements: [
+    "15+ anos de experiência na área de tecnologia",
+    "Especialista em Desenvolvimento de Software",
+    "Coordenadora de 200+ estudantes",
+  ],
+}
+
 export const advisors: Advisor[] = [
   {
     name: "Prof. Rubens Castaldelli Carlos",
@@ -17,7 +32,7 @@ export const advisors: Advisor[] = [
   {
     name: "Prof. Emerson Rodrigo Baião",
     title: "Professor Orientador",
-    photo: "/placeholder-user.jpg",
+    photo: "/emerson.jpeg",
     email: "emerson.baiao@etec.sp.gov.br",
     linkedin: "https://www.linkedin.com/in/emerson-rodrigo-bai%C3%A3o-18727682/",
     department: "Desenvolvimento de Sistemas",

@@ -8,11 +8,14 @@ import type { TCCProject } from "@/lib/types"
 interface ProjectCardProps {
   project: TCCProject
   variant?: 'default' | 'compact' | 'detailed'
+  inCarousel?: boolean
 }
 
-export function ProjectCard({ project, variant = 'default' }: ProjectCardProps) {
+export function ProjectCard({ project, variant = 'default', inCarousel = false }: ProjectCardProps) {
+  const hoverClass = inCarousel ? 'hover-lift-carousel' : 'hover-lift'
+  
   const renderCompact = () => (
-    <Card className="group hover-lift shadow-glow glass overflow-hidden">
+    <Card className={`group ${hoverClass} shadow-glow glass overflow-hidden`}>
       <CardContent className="p-0">
         <div className="aspect-video bg-white overflow-hidden relative flex items-center justify-center">
           <img
@@ -57,7 +60,7 @@ export function ProjectCard({ project, variant = 'default' }: ProjectCardProps) 
   )
 
   const renderDefault = () => (
-    <Card className="group hover-lift shadow-glow glass overflow-hidden">
+    <Card className={`group ${hoverClass} shadow-glow glass overflow-hidden`}>
       <CardContent className="p-0">
         <div className="aspect-video bg-white overflow-hidden relative flex items-center justify-center">
           <img
@@ -114,7 +117,7 @@ export function ProjectCard({ project, variant = 'default' }: ProjectCardProps) 
   )
 
   const renderDetailed = () => (
-    <Card className="group hover-lift shadow-glow glass overflow-hidden h-full flex flex-col">
+    <Card className={`group ${hoverClass} shadow-glow glass overflow-hidden h-full flex flex-col`}>
       <CardContent className="p-0 flex flex-col h-full">
         <div className="aspect-video bg-white overflow-hidden relative flex items-center justify-center">
           <img

@@ -143,7 +143,7 @@ export function ProjetosClient() {
               className="mb-8"
             >
               {filteredProjects.map((project) => (
-                <ProjectCard key={project.id} project={project} variant="detailed" />
+                <ProjectCard key={project.id} project={project} variant="detailed" inCarousel={true} />
               ))}
             </Carousel>
           ) : (
