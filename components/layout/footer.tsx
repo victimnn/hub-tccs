@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Linkedin } from "lucide-react"
+import { Github, Linkedin, PanelTop } from "lucide-react"
 
 export function Footer() {
   return (
@@ -18,17 +18,26 @@ export function Footer() {
           <p className="text-sm text-muted-foreground mb-3">Desenvolvido por</p>
           <p className="font-semibold text-primary mb-3">Victor Gabriel Prado Ramos</p>
           <div className="flex justify-center gap-4">
-            <Link 
-              href="https://github.com/victimnn" 
-              target="_blank" 
+            <Link
+              href="https://dsetec.vercel.app/personal"
+              target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+            >
+              <PanelTop strokeWidth={0.75} />
+              Portfolio
+            </Link>
+            <Link
+              href="https://github.com/victimnn"
+              target="_blank"
+              rel="noopener noreferrer"
+                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
             >
               <Github className="h-4 w-4" />
               GitHub
             </Link>
             <Link 
-              href="https://linkedin.com/in/victor-ramos" 
+              href="https://www.linkedin.com/in/victor-pramos19/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"

@@ -35,7 +35,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
           role: "Full Stack Developer, Scrum Master, Designer, Banco de Dados",
           photo: "/bushere/victor.png",
           github: "https://github.com/victimnn",
-          linkedin: "https://linkedin.com/in/victor-ramos",
+          linkedin: "https://www.linkedin.com/in/victor-pramos19/",
           email: "victor.ramosp19@gmail.com",
           location: "Jaguariúna, SP",
           about: `Desenvolvedor Full Stack em formação, com experiência em backend, frontend e bancos de dados.
