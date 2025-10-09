@@ -45,7 +45,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
           interesse em áreas como cloud computing, integração de sistemas, automação e 
           inteligência artificial, visando unir prática acadêmica e profissional para entregar resultados de impacto`,
           expertise: "Frontend Development, UI/UX Design, React, Node.js, MySQL",
-          skills: ["React", "TypeScript", "Node.js", "MySQL", "Figma", "Git"],
+          skills: ["Typescript", "Next.js", "React", "Node.js", "SQL", "Tailwind", "Figma"],
           achievements: [
             "Líder & FullStack Developer do projeto BusHere!.",
             "Desenvolvedor de 10+ projetos autorais e co-autorais.",
