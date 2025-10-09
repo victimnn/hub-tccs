@@ -661,19 +661,20 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
       },
       {
         name: "João Pedro Cezar",
-        role: "Full Stack Developer",
-        photo: "/placeholder-user.jpg",
-        linkedin: "",
-        email: "",
-        github: "",
-        location: "Monte Alegre do Sul, SP",
-        about: "Desenvolvedor Full Stack do projeto Interclass Manager, sistema de organização de jogos interclasses.",
-        career: "Atua no desenvolvimento de sistemas web com foco em organização de eventos esportivos.",
-        expertise: "Full Stack Development, Node.js, Next.js",
-        skills: ["Node.js", "Next.js", "JavaScript", "React", "Prisma", "PostgreSQL"],
-        achievements: [
-          "Desenvolvedor do projeto Interclass Manager",
-        ],
+	      role: "Full Stack Developer",
+	      photo: "/interclassManager/cezar.png",
+	      linkedin: "https://www.linkedin.com/in/joaopedrocezar/",
+	      email: "joaopedrocezar777@gmail.com",
+	      location: "Amparo, SP",
+	      about: "Finalizando Técnico em Desenvolvimento de Sistemas e, futuramente, cursando Engenharia da Computação. Busco integrar essas experiências diversificadas em projetos de tecnologia, combinando competências práticas e analíticas para contribuir com soluções inovadoras e eficientes.",
+	      career: "Em formação, com foco em consolidar experiência prática em programação, banco de dados e análise de dados e sistemas.",
+	      expertise: "Next.js, React, MySQL, PowerBI, Nest.js",
+	      skills: ["Typescript", "Next.js", "Nest.js", "React", "SQL", "Tailwind", "Power BI" ],
+	      achievements: [
+		      "Líder & Full Stack Developer do projeto ICM, garantindo desempenho e organização da aplicação.",
+		      "Desenvolver aplicação que utiliza a AI SDK para gerar um quiz a partir de um arquivo PDF.",
+		      "Desenvimento do site A Criação de Dialetos, com o objetivo de apoiar e dar visibilidade ao trabalho autoral do professor.",
+	    ],
       },
       {
         name: "Ikaro Freire",
@@ -715,6 +716,11 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
     image: "/jbeventos/logo.jpg",
     imageZoom: 200,
     technologies: ["Laravel", "PHP", "JavaScript", "Vite", "Tailwind CSS", "Livewire", "SQL"],
+    gallery: [
+      "/jbeventos/jbeventos-1.jpg",
+      "/jbeventos/jbeventos-2.jpg",
+      "/jbeventos/jbeventos-3.jpg",
+    ],
     members: [
       {
         name: "Felipe Barbosa da Silva",
