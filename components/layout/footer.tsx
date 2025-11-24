@@ -19,7 +19,7 @@ export function Footer() {
           <p className="font-semibold text-primary mb-3">Victor Gabriel Prado Ramos</p>
           <div className="flex justify-center gap-4">
             <Link
-              href="https://dsetec.vercel.app/personal"
+              href="https://dsetecjb.com.br/personal"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
