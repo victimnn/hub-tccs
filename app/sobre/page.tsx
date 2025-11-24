@@ -68,7 +68,7 @@ export default function SobrePage() {
               </Link>
             </Button>
             <Button variant="outline" size="lg" className="text-lg px-8 glass hover-lift">
-              <Link href="https://dsetec.vercel.app">Site Oficial do Curso</Link>
+              <Link href="https://dsetecjb.com.br">Site Oficial do Curso</Link>
             </Button>
           </div>
         </div>
