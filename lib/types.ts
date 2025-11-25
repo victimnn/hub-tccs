@@ -4,6 +4,7 @@ export interface TeamMember {
   photo: string
   linkedin?: string
   github?: string
+  portfolio?: string
   email?: string
   location?: string
   about: string

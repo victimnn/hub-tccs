@@ -54,7 +54,7 @@ export default function HomePage() {
           </h1>
 
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-7 md:mb-8 max-w-2xl mx-auto text-pretty text-justify">
-          No dia 27 de novembro, os alunos apresentam seus Trabalhos de Conclusão de Curso. Uma oportunidade para conhecer projetos inovadores e soluções criativas desenvolvidas ao longo da formação. Venha prestigiar e se inspirar com o futuro da tecnologia!
+          No dia 28 de novembro, os alunos apresentam seus Trabalhos de Conclusão de Curso. Uma oportunidade para conhecer projetos inovadores e soluções criativas desenvolvidas ao longo da formação. Venha prestigiar e se inspirar com o futuro da tecnologia!
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">

@@ -74,6 +74,15 @@ export function TeamMemberPopup({ member, children }: TeamMemberPopupProps) {
                   </Button>
                 )}
 
+                {member.portfolio && (
+                  <Button size="sm" variant="outline" asChild>
+                    <a href={member.portfolio} target="_blank" rel="noopener noreferrer">
+                      <User className="mr-2 h-4 w-4" />
+                      Portfolio
+                    </a>
+                  </Button>
+                )}
+
                 {member.email && (
                   <Button size="sm" variant="outline" asChild>
                     <a href={`mailto:${member.email}`}>
