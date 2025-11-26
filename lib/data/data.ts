@@ -32,7 +32,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
     members: [
         {
           name: "Victor Ramos",
-          role: "Full Stack Developer, Scrum Master, Designer, Banco de Dados",
+          role: "Full Stack Developer, Scrum Master, UI/UX Designer, Analista de Dados",
           photo: "/bushere/victor.png",
           github: "https://github.com/victimnn",
           portfolio: "https://dsetecjb.com.br/personal",
@@ -73,7 +73,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
         },
         {
           name: "Marcelo Henrique Santos Camillo",
-          role: "Dev Front-End, Analista de dados",
+          role: "Frontend Developer, Analista de dados",
           photo: "/bushere/marcelo.jpeg",
           github: "https://github.com/marcelotrikas",
           linkedin: "https://www.linkedin.com/in/marcelo-henrique-santos-camillo/",
@@ -90,7 +90,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
         },
         {
           name: "Renan Andrade",
-          role: "Dev Full Stack",
+          role: "Backend Developer",
           photo: "/bushere/renan.jpg",
           linkedin: "https://www.linkedin.com/in/renan-andrade-dos-santos-40ba09326",
           github: "https://github.com/Laggh",
