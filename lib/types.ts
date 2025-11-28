@@ -49,6 +49,7 @@ export interface TCCProject {
   features?: string[]
   links?: ProjectLinks
   imageZoom?: number
+  videoUrl?: string
 }
 
 export interface NavigationItem {

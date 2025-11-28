@@ -136,6 +136,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
       "Sistema de notificações",
       "Dashboard administrativo",
     ],
+    videoUrl: "https://youtu.be/Wp5SMPHH3hs",
   },
   {
     id: 2,
@@ -255,6 +256,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
       "Proteção de dados pessoais",
       "Melhora na comunicação entre empresa e candidato",
     ],
+    videoUrl: "https://youtu.be/NXAj-tUdWzk",
   },
   {
     id: 3,
@@ -378,6 +380,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
       "Sistema de rotas",
       "Sistema de notificações",
     ],
+    videoUrl: "https://youtu.be/iLfO5whRPns",
   },
   {
     id: 4,
@@ -484,6 +487,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
       "Dicionário Interativo",
       "Acompanhamento de Progresso",
     ],
+    videoUrl: "https://youtu.be/mMjbgezXoiQ",
   },
   {
     id: 5,
@@ -597,6 +601,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
       github: "https://github.com/Michel-Mian/Agendai",
       github2: "https://github.com/RafaelFante/agendai-flutter",
     },
+    videoUrl: "https://youtu.be/oiUrFrSxk8A",
   },
   {
     id: 6,
@@ -708,6 +713,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
     links: {
       github: "https://github.com/GabrielRC2/tcc_interclasse",
     },
+    videoUrl: "https://youtu.be/3M0oDpPyuyQ",
     },
   {
     id: 7,
@@ -800,6 +806,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
     links: {
       github: "https://github.com/d4nilo-sousa/TCC-jbeventos",
     },
+    videoUrl: "https://youtu.be/3rdpzghyrYI",
   },
   {
     id: 8,
@@ -888,6 +895,7 @@ Além disso, a plataforma promove um ambiente colaborativo, onde programadores p
       "Acompanhamento de empresas",
       "Ambiente colaborativo para programadores",
     ],
+    videoUrl: "https://youtu.be/-4TM4uMft8E",
   },
 ]
 

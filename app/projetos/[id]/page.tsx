@@ -7,6 +7,7 @@ import { ProjectTechnologies } from "@/components/project/project-technologies"
 import { ProjectInfo } from "@/components/project/project-info"
 import { ImageGallery } from "@/components/project/image-gallery"
 import { ShareButtons } from "@/components/project/share-buttons"
+import { VideoPlayer } from "@/components/project/video-player"
 import Link from "next/link"
 import { ArrowLeft, ExternalLink, Github, Globe, Download, Play, ImageIcon, Calendar } from "lucide-react"
 import { notFound } from "next/navigation"
@@ -183,6 +184,20 @@ export default function TCCDetailsPage({ params }: PageProps) {
                       </div>
                     ))}
                   </div>
+                </section>
+              )}
+
+              {/* Video Player */}
+              {project.videoUrl && (
+                <section>
+                  <h2 className="text-2xl font-bold mb-4 flex items-center">
+                    <Play className="mr-2 h-5 w-5" />
+                    Demonstração em Vídeo
+                  </h2>
+                  <VideoPlayer 
+                    videoUrl={project.videoUrl}
+                    title={project.title}
+                  />
                 </section>
               )}
 
