@@ -299,6 +299,7 @@ Mais do que um software, o BusHere! representa um passo rumo a uma gestão mais 
         linkedin: "https://www.linkedin.com/in/murilo-fornel-de-almeida",
         email: "murilofdal@gmail.com",
         github: "https://github.com/fornel07",
+        portfolio: "https://meu-portifolio-two-delta.vercel.app",
         location: "Amparo, SP",
         about: "Sou estudante do último semestre do curso de Desenvolvimento de Sistemas na ETEC João Belarmino, onde desenvolvi um skillset sólido em Frontend, UI/UX Design e tecnologias de backend como Laravel Blade com MySQL. Minha abordagem é sempre voltada para a inovação criativa e a otimização da experiência do usuário, garantindo que o produto final seja intuitivo e de alta qualidade.",
         career: "Meu objetivo de carreira é me aprofundar na área de Tecnologia e Inovação, especialmente em projetos de Inteligência Artificial. Estou determinado a desenvolver soluções de ponta que não apenas resolvam problemas atuais, mas que também preparem organizações para os desafios e oportunidades do mundo tecnológico em constante evolução.",
