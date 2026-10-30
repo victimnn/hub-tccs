@@ -9,9 +9,7 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/projetos/1",
-        destination: "https://tcc.dsetecjb.com.br/projetos/14",
-        permanent: true, // true=301, false=302
+
       },
     ];
   },
